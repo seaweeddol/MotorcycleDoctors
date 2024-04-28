@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
-  m_Name: Bundle1_1
+  m_Name: Bundle1_2
   m_EditorClassIdentifier: 
-  <EncounterText>k__BackingField: "While travelling down the open road, you spot
-    an abandoned gas station. You\u2019re able to fully refuel all of your Motorcycles
-    at no cost."
-  <EncounterOptions>k__BackingField: []
+  <EncounterText>k__BackingField: 'After getting on the highway, you find an abandoned
+    car blocking the road. The rear door is open and you can see Medicine in the
+    backseat. '
+  <EncounterOptions>k__BackingField:
+  - {fileID: 11400000, guid: 846f6efb64e01b042972fc7884cce0df, type: 2}
+  - {fileID: 11400000, guid: 8c89008575210b54bb644c8fef23b22d, type: 2}
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: 0
   <IsAllHealthAffected>k__BackingField: 0

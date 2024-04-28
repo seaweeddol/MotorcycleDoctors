@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c09db610c5ae8d0469c7cb43a84a8f6a, type: 3}
+  m_Name: Bundle1_2_Option1
+  m_EditorClassIdentifier: 
+  <OptionText>k__BackingField: Drive around the abandoned car.
+  <Encounter>k__BackingField: {fileID: 11400000, guid: cf0992a9966c9d54c8977c5cc328eb4c, type: 2}

@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
-  m_Name: Bundle1_1
+  m_Name: Bundle1_2 Option1_Encounter
   m_EditorClassIdentifier: 
-  <EncounterText>k__BackingField: "While travelling down the open road, you spot
-    an abandoned gas station. You\u2019re able to fully refuel all of your Motorcycles
-    at no cost."
+  <EncounterText>k__BackingField: You know a trap when you see one. You drive around
+    the car and speed off down the highway.
   <EncounterOptions>k__BackingField: []
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: 0

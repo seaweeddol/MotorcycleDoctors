@@ -29,7 +29,8 @@ public class EncounterManager : MonoBehaviour
     [SerializeField]
     private List<Motorcyclist> _motorcyclists;
 
-    private EncounterSO _encounter;
+    private EncounterSO _currentEncounter;
+    private bool _isEncounterActive;
 
     void Awake()
     {
@@ -77,16 +78,19 @@ public class EncounterManager : MonoBehaviour
         }
 
         int randomEncounterIndex = Random.Range(0, _encounters.Count);
-        _encounter = _encounters[randomEncounterIndex];
-        _encounters.Remove(_encounter);
+        _currentEncounter = _encounters[randomEncounterIndex];
+        _encounters.Remove(_currentEncounter);
         return true;
     }
 
+    /*
+        encounter: Provide if EnableEncounter() is accessed due to option selection.
+    */
     public void EnableEncounter(EncounterSO encounter = null)
     {
         if (encounter != null)
         {
-            _encounter = encounter;
+            _currentEncounter = encounter;
         }
         else
         {
@@ -95,9 +99,9 @@ public class EncounterManager : MonoBehaviour
 
         _encounterParent.SetActive(true);
 
-        _encounterText.text = _encounter.EncounterText;
+        _encounterText.text = _currentEncounter.EncounterText;
 
-        if (_encounter.EncounterOptions != null && _encounter.EncounterOptions.Count != 0)
+        if (_currentEncounter.EncounterOptions != null && _currentEncounter.EncounterOptions.Count != 0)
         {
             _optionParent.SetActive(true);
             // add encounter option buttons
@@ -126,6 +130,18 @@ public class EncounterManager : MonoBehaviour
         _encounterParent.SetActive(false);
         _optionParent.SetActive(false);
         _continuePrompt.SetActive(false);
+    }
+
+    public bool CheckIfActive()
+    {
+        if (_encounterParent.activeSelf)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /*
