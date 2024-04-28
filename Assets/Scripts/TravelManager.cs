@@ -21,7 +21,6 @@ public class TravelManager : MonoBehaviour
     private float _timer = 0f;
     private int _encounterCounter = 0;
 
-
     void Awake()
     {
         int numTravelManager = FindObjectsOfType<TravelManager>().Length;
