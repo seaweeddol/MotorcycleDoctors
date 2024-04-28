@@ -174,17 +174,17 @@ public class EncounterManager : MonoBehaviour
         }
 
         // motorcycle health
-        if (_currentEncounter.IsAllMotorcycleHealthAffected)
+        if (_currentEncounter.IsAllMotorcycleConditionAffected)
         {
             foreach (Motorcyclist motorcyclist in _motorcyclists)
             {
-                if (_currentEncounter.FillMaxMotorcycleHealth)
+                if (_currentEncounter.FillMaxMotorcycleCondition)
                 {
-                    motorcyclist.MaxOutMotorcycleHealth();
+                    motorcyclist.MaxOutMotorcycleCondition();
                 }
                 else
                 {
-                    motorcyclist.UpdateMotorcycleHealth(_currentEncounter.MotorcycleHealthChange);
+                    motorcyclist.UpdateMotorcycleCondition(_currentEncounter.MotorcycleConditionChange);
 
                 }
             }
@@ -192,7 +192,7 @@ public class EncounterManager : MonoBehaviour
         else
         {
             int randomIndex = Random.Range(0, _motorcyclists.Count);
-            _motorcyclists[randomIndex].UpdateMotorcycleHealth(_currentEncounter.MotorcycleHealthChange);
+            _motorcyclists[randomIndex].UpdateMotorcycleCondition(_currentEncounter.MotorcycleConditionChange);
         }
 
     }

@@ -20,11 +20,11 @@ public class EncounterSO : ScriptableObject
     public bool IsAllHealthAffected { get; private set; }
 
     [field: SerializeField]
-    public bool FillMaxMotorcycleHealth { get; private set; }
+    public bool FillMaxMotorcycleCondition { get; private set; }
     [field: SerializeField]
-    public int MotorcycleHealthChange { get; private set; }
+    public int MotorcycleConditionChange { get; private set; }
     [field: SerializeField]
-    public bool IsAllMotorcycleHealthAffected { get; private set; }
+    public bool IsAllMotorcycleConditionAffected { get; private set; }
 
     [field: SerializeField]
     public bool FillMaxFuel { get; private set; }

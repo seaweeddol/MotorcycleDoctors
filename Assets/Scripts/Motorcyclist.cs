@@ -17,7 +17,7 @@ public class Motorcyclist : MonoBehaviour
     private int _maxFuel = 20;
 
     [SerializeField]
-    private int _maxMotorcycleHealth = 3;
+    private int _maxMotorcycleCondition = 3;
 
     [SerializeField]
     private TextMeshProUGUI _nameText;
@@ -29,14 +29,21 @@ public class Motorcyclist : MonoBehaviour
     private SliderBar _fuelSlider;
 
     [SerializeField]
-    private SliderBar _motorcycleHealthSlider;
+    private SliderBar _motorcycleConditionSlider;
 
     [SerializeField]
     private float _fuelDrainTimer = 2f;
 
+    [SerializeField]
+    private int _healthLostEachDay = 1;
+    [SerializeField]
+    private int _fuelLostEachDay = 0;
+    [SerializeField]
+    private int _motorcycleConditionLostEachDay = 0;
+
     private int _currentHealth;
     private int _currentFuel;
-    private int _currentMotorcycleHealth;
+    private int _currentMotorcycleCondition;
     private float _fuelTimer = 0f;
     private bool _isDead = false;
     private bool _isFirstTravel = true;
@@ -45,19 +52,19 @@ public class Motorcyclist : MonoBehaviour
 
     private int _HEALTH = 0;
     private int _FUEL = 1;
-    private int _MOTORCYCLEHEALTH = 2;
+    private int _MOTORCYCLECONDITION = 2;
 
     void Start()
     {
         _currentHealth = _maxHealth;
         _currentFuel = _maxFuel;
-        _currentMotorcycleHealth = _maxMotorcycleHealth;
+        _currentMotorcycleCondition = _maxMotorcycleCondition;
         _isFirstTravel = false;
 
         _nameText.text = _motorcyclistName;
         _healthSlider.SetMaxValue(_maxHealth);
         _fuelSlider.SetMaxValue(_maxFuel);
-        _motorcycleHealthSlider.SetMaxValue(_maxMotorcycleHealth);
+        _motorcycleConditionSlider.SetMaxValue(_maxMotorcycleCondition);
     }
 
     void Update()
@@ -90,16 +97,16 @@ public class Motorcyclist : MonoBehaviour
         _healthSlider.SetCurrentValue(_currentHealth);
     }
 
-    public void UpdateMotorcycleHealth(int amount)
+    public void UpdateMotorcycleCondition(int amount)
     {
-        _currentMotorcycleHealth += amount;
-        _motorcycleHealthSlider.SetCurrentValue(_currentMotorcycleHealth);
+        _currentMotorcycleCondition += amount;
+        _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
     }
 
-    public void MaxOutMotorcycleHealth()
+    public void MaxOutMotorcycleCondition()
     {
-        _currentMotorcycleHealth = _maxMotorcycleHealth;
-        _motorcycleHealthSlider.SetCurrentValue(_currentFuel);
+        _currentMotorcycleCondition = _maxMotorcycleCondition;
+        _motorcycleConditionSlider.SetCurrentValue(_currentFuel);
     }
 
     public void UpdateFuel(int amount)
@@ -133,7 +140,7 @@ public class Motorcyclist : MonoBehaviour
                 }
                 break;
             case 2:
-                if (_currentMotorcycleHealth <= 0)
+                if (_currentMotorcycleCondition <= 0)
                 {
 
                 }

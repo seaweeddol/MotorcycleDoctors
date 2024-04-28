@@ -414,12 +414,15 @@ MonoBehaviour:
   _motorcyclistName: Jerry
   _maxHealth: 10
   _maxFuel: 20
-  _maxMotorcycleHealth: 3
+  _maxMotorcycleCondition: 3
   _nameText: {fileID: 1010243869}
   _healthSlider: {fileID: 1827259379}
   _fuelSlider: {fileID: 1477142920}
-  _motorcycleHealthSlider: {fileID: 411136494}
+  _motorcycleConditionSlider: {fileID: 0}
   _fuelDrainTimer: 2
+  _healthLostEachDay: 1
+  _fuelLostEachDay: 0
+  _motorcycleConditionLostEachDay: 0
 --- !u!1 &63646409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1780,7 @@ GameObject:
   - component: {fileID: 411136495}
   - component: {fileID: 411136494}
   m_Layer: 5
-  m_Name: Motorcycle health bar
+  m_Name: Motorcycle condition bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1957,12 +1960,15 @@ MonoBehaviour:
   _motorcyclistName: Jerry
   _maxHealth: 10
   _maxFuel: 20
-  _maxMotorcycleHealth: 3
+  _maxMotorcycleCondition: 3
   _nameText: {fileID: 2099226250}
   _healthSlider: {fileID: 786573159}
   _fuelSlider: {fileID: 2089659408}
-  _motorcycleHealthSlider: {fileID: 1142740418}
+  _motorcycleConditionSlider: {fileID: 0}
   _fuelDrainTimer: 2
+  _healthLostEachDay: 1
+  _fuelLostEachDay: 0
+  _motorcycleConditionLostEachDay: 0
 --- !u!114 &475658941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12816,7 +12822,7 @@ GameObject:
   - component: {fileID: 987390332}
   - component: {fileID: 987390331}
   m_Layer: 5
-  m_Name: Motorcycle health bar
+  m_Name: Motorcycle condition bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13512,7 +13518,7 @@ GameObject:
   - component: {fileID: 1142740419}
   - component: {fileID: 1142740418}
   m_Layer: 5
-  m_Name: Motorcycle health bar
+  m_Name: Motorcycle condition bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14083,12 +14089,15 @@ MonoBehaviour:
   _motorcyclistName: Jerry
   _maxHealth: 10
   _maxFuel: 20
-  _maxMotorcycleHealth: 3
+  _maxMotorcycleCondition: 3
   _nameText: {fileID: 1992578242}
   _healthSlider: {fileID: 361756639}
   _fuelSlider: {fileID: 159197268}
-  _motorcycleHealthSlider: {fileID: 987390331}
+  _motorcycleConditionSlider: {fileID: 0}
   _fuelDrainTimer: 2
+  _healthLostEachDay: 1
+  _fuelLostEachDay: 0
+  _motorcycleConditionLostEachDay: 0
 --- !u!114 &1335283625
 MonoBehaviour:
   m_ObjectHideFlags: 0
