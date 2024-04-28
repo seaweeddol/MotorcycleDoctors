@@ -19,15 +19,12 @@ MonoBehaviour:
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: 0
   <IsAllHealthAffected>k__BackingField: 0
-  <MotorcyclistHealthAffected>k__BackingField: 0
   <FillMaxMotorcycleHealth>k__BackingField: 0
   <MotorcycleHealthChange>k__BackingField: 0
   <IsAllMotorcycleHealthAffected>k__BackingField: 0
-  <MotorcyclistMotorcycleHealthAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 1
   <FuelChange>k__BackingField: 0
   <IsAllFuelAffected>k__BackingField: 1
-  <MotorcyclistFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
   <MedicineChange>k__BackingField: 0

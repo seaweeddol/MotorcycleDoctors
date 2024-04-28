@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EncounterManager : MonoBehaviour
 {
@@ -48,7 +49,8 @@ public class EncounterManager : MonoBehaviour
 
     void Update()
     {
-        if (_encounterParent.activeSelf && _continuePrompt.activeSelf)
+        // if (_encounterParent.activeSelf && _continuePrompt.activeSelf)
+        if (_encounterParent.activeSelf)
         {
             if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -104,10 +106,13 @@ public class EncounterManager : MonoBehaviour
         if (_currentEncounter.EncounterOptions != null && _currentEncounter.EncounterOptions.Count != 0)
         {
             _optionParent.SetActive(true);
-            // add encounter option buttons
-            // for each encounter option, create a _optionPrefab
-            // set button text to encounter text
-            // set click action to create a new encounter game object
+            foreach (EncounterOptionSO encounterOption in _currentEncounter.EncounterOptions)
+            {
+                Debug.Log(encounterOption);
+                GameObject option = Instantiate(_optionPrefab, _optionParent.transform);
+                option.GetComponent<EncounterOption>().SetEncounter(encounterOption.Encounter);
+                option.GetComponentInChildren<TextMeshProUGUI>().text = encounterOption.OptionText;
+            }
         }
         else
         {
@@ -135,7 +140,6 @@ public class EncounterManager : MonoBehaviour
                 else
                 {
                     motorcyclist.UpdateHealth(_currentEncounter.HealthChange);
-
                 }
             }
         }
@@ -189,16 +193,6 @@ public class EncounterManager : MonoBehaviour
             _motorcyclists[randomIndex].UpdateMotorcycleHealth(_currentEncounter.MotorcycleHealthChange);
         }
 
-    }
-
-    public void SelectOption(EncounterSO encounter)
-    {
-        /*
-            when an option is selected, we want to update the encounter text to the selected option text
-            get the index of the selected option
-            _encounter = _encounter.EncounterOptions[selectedIndex]
-            _encounterText.text = _encounter.EncounterText;
-        */
     }
 
     private void DisableEncounter()
