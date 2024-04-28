@@ -105,6 +105,7 @@ public class EncounterManager : MonoBehaviour
 
         if (_currentEncounter.EncounterOptions != null && _currentEncounter.EncounterOptions.Count != 0)
         {
+            _continuePrompt.SetActive(false);
             _optionParent.SetActive(true);
             foreach (EncounterOptionSO encounterOption in _currentEncounter.EncounterOptions)
             {
@@ -116,6 +117,7 @@ public class EncounterManager : MonoBehaviour
         }
         else
         {
+            _optionParent.SetActive(false);
             _continuePrompt.SetActive(true);
         }
 
@@ -197,6 +199,11 @@ public class EncounterManager : MonoBehaviour
 
     private void DisableEncounter()
     {
+        while (_optionParent.transform.childCount > 0)
+        {
+            DestroyImmediate(_optionParent.transform.GetChild(0).gameObject);
+        }
+
         _encounterParent.SetActive(false);
         _optionParent.SetActive(false);
         _continuePrompt.SetActive(false);

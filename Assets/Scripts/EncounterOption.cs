@@ -9,12 +9,7 @@ public class EncounterOption : MonoBehaviour
     public void SelectOption()
     {
         Debug.Log("option: " + _encounter.EncounterText);
-        /*
-            when an option is selected, we want to update the encounter text to the selected option text
-            get the index of the selected option
-            _encounter = _encounter.EncounterOptions[selectedIndex]
-            _encounterText.text = _encounter.EncounterText;
-        */
+        FindObjectOfType<EncounterManager>().EnableEncounter(_encounter);
     }
 
     public void SetEncounter(EncounterSO encounter)
