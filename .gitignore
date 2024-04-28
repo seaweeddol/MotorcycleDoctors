@@ -73,6 +73,7 @@ crashlytics-build.properties
 
 # Ignore asset folders
 /Assets/Animation/
+/Assets/Animations/
 /Assets/Audio/
 /Assets/Fonts/
 /Assets/Materials/
