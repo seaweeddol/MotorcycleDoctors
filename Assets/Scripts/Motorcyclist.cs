@@ -49,19 +49,10 @@ public class Motorcyclist : MonoBehaviour
 
     void Start()
     {
-        // if (_isFirstTravel)
-        // {
         _currentHealth = _maxHealth;
         _currentFuel = _maxFuel;
         _currentMotorcycleHealth = _maxMotorcycleHealth;
         _isFirstTravel = false;
-        // }
-        // else
-        // {
-        //     _healthSlider.SetCurrentValue(_currentHealth);
-        //     _motorcycleHealthSlider.SetCurrentValue(_currentMotorcycleHealth);
-        //     _fuelSlider.SetCurrentValue(_currentFuel);
-        // }
 
         _nameText.text = _motorcyclistName;
         _healthSlider.SetMaxValue(_maxHealth);
@@ -93,10 +84,22 @@ public class Motorcyclist : MonoBehaviour
         _healthSlider.SetCurrentValue(_currentHealth);
     }
 
+    public void MaxOutHealth()
+    {
+        _currentHealth = _maxHealth;
+        _healthSlider.SetCurrentValue(_currentHealth);
+    }
+
     public void UpdateMotorcycleHealth(int amount)
     {
         _currentMotorcycleHealth += amount;
         _motorcycleHealthSlider.SetCurrentValue(_currentMotorcycleHealth);
+    }
+
+    public void MaxOutMotorcycleHealth()
+    {
+        _currentMotorcycleHealth = _maxMotorcycleHealth;
+        _motorcycleHealthSlider.SetCurrentValue(_currentFuel);
     }
 
     public void UpdateFuel(int amount)
@@ -105,12 +108,11 @@ public class Motorcyclist : MonoBehaviour
         _fuelSlider.SetCurrentValue(_currentFuel);
     }
 
-    public void FillFuelCompletely()
+    public void MaxOutFuel()
     {
         _currentFuel = _maxFuel;
         _fuelSlider.SetCurrentValue(_currentFuel);
     }
-
 
     private void CheckIfDead(int type)
     {

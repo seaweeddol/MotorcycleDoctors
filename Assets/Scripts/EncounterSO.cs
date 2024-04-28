@@ -18,8 +18,6 @@ public class EncounterSO : ScriptableObject
     public int HealthChange { get; private set; }
     [field: SerializeField]
     public bool IsAllHealthAffected { get; private set; }
-    [field: SerializeField]
-    public int MotorcyclistHealthAffected { get; private set; }
 
     [field: SerializeField]
     public bool FillMaxMotorcycleHealth { get; private set; }
@@ -27,8 +25,6 @@ public class EncounterSO : ScriptableObject
     public int MotorcycleHealthChange { get; private set; }
     [field: SerializeField]
     public bool IsAllMotorcycleHealthAffected { get; private set; }
-    [field: SerializeField]
-    public int MotorcyclistMotorcycleHealthAffected { get; private set; }
 
     [field: SerializeField]
     public bool FillMaxFuel { get; private set; }
@@ -36,8 +32,6 @@ public class EncounterSO : ScriptableObject
     public int FuelChange { get; private set; }
     [field: SerializeField]
     public bool IsAllFuelAffected { get; private set; }
-    [field: SerializeField]
-    public int MotorcyclistFuelAffected { get; private set; }
 
     [field: SerializeField]
     public int MoneyChange { get; private set; }

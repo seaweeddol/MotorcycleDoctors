@@ -18,17 +18,14 @@ MonoBehaviour:
     able to get away with the Medicine."
   <EncounterOptions>k__BackingField: []
   <FillMaxHealth>k__BackingField: 0
-  <HealthChange>k__BackingField: 1
+  <HealthChange>k__BackingField: -1
   <IsAllHealthAffected>k__BackingField: 0
-  <MotorcyclistHealthAffected>k__BackingField: 0
   <FillMaxMotorcycleHealth>k__BackingField: 0
-  <MotorcycleHealthChange>k__BackingField: 1
+  <MotorcycleHealthChange>k__BackingField: -1
   <IsAllMotorcycleHealthAffected>k__BackingField: 0
-  <MotorcyclistMotorcycleHealthAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0
   <IsAllFuelAffected>k__BackingField: 0
-  <MotorcyclistFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
   <MedicineChange>k__BackingField: 1

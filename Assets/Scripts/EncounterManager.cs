@@ -113,6 +113,82 @@ public class EncounterManager : MonoBehaviour
         {
             _continuePrompt.SetActive(true);
         }
+
+        UpdateStats();
+    }
+
+    private void UpdateStats()
+    {
+        _groupStats.UpdateMoney(_currentEncounter.MoneyChange);
+        _groupStats.UpdateAmmo(_currentEncounter.AmmoChange);
+        _groupStats.UpdateMedicine(_currentEncounter.MedicineChange);
+
+        // health
+        if (_currentEncounter.IsAllHealthAffected)
+        {
+            foreach (Motorcyclist motorcyclist in _motorcyclists)
+            {
+                if (_currentEncounter.FillMaxHealth)
+                {
+                    motorcyclist.MaxOutHealth();
+                }
+                else
+                {
+                    motorcyclist.UpdateHealth(_currentEncounter.HealthChange);
+
+                }
+            }
+        }
+        else
+        {
+            int randomIndex = Random.Range(0, _motorcyclists.Count);
+            _motorcyclists[randomIndex].UpdateHealth(_currentEncounter.HealthChange);
+        }
+
+        // fuel
+        if (_currentEncounter.IsAllFuelAffected)
+        {
+            foreach (Motorcyclist motorcyclist in _motorcyclists)
+            {
+                if (_currentEncounter.FillMaxFuel)
+                {
+                    motorcyclist.MaxOutFuel();
+                }
+                else
+                {
+                    motorcyclist.UpdateFuel(_currentEncounter.FuelChange);
+
+                }
+            }
+        }
+        else
+        {
+            int randomIndex = Random.Range(0, _motorcyclists.Count);
+            _motorcyclists[randomIndex].UpdateFuel(_currentEncounter.FuelChange);
+        }
+
+        // motorcycle health
+        if (_currentEncounter.IsAllMotorcycleHealthAffected)
+        {
+            foreach (Motorcyclist motorcyclist in _motorcyclists)
+            {
+                if (_currentEncounter.FillMaxMotorcycleHealth)
+                {
+                    motorcyclist.MaxOutMotorcycleHealth();
+                }
+                else
+                {
+                    motorcyclist.UpdateMotorcycleHealth(_currentEncounter.MotorcycleHealthChange);
+
+                }
+            }
+        }
+        else
+        {
+            int randomIndex = Random.Range(0, _motorcyclists.Count);
+            _motorcyclists[randomIndex].UpdateMotorcycleHealth(_currentEncounter.MotorcycleHealthChange);
+        }
+
     }
 
     public void SelectOption(EncounterSO encounter)
