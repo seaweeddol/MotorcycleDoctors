@@ -27,8 +27,8 @@ public class EncounterManager : MonoBehaviour
     [SerializeField]
     private GroupStats _groupStats;
 
-    [SerializeField]
-    private List<Motorcyclist> _motorcyclists;
+    [field: SerializeField]
+    public List<Motorcyclist> _motorcyclists { get; private set; }
 
     private EncounterSO _currentEncounter;
     private bool _isEncounterActive;

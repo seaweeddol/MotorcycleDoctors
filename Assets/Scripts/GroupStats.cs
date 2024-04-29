@@ -43,4 +43,17 @@ public class GroupStats : MonoBehaviour
         _medicine += amount;
         _medicineText.text = _medicine.ToString();
     }
+
+    public bool HasEnoughMoney(int amountToSubtract)
+    {
+        int moneyAfterCost = _money - amountToSubtract;
+        if (moneyAfterCost < 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }

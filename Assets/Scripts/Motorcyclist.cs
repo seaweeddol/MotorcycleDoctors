@@ -41,9 +41,9 @@ public class Motorcyclist : MonoBehaviour
     [SerializeField]
     private int _motorcycleConditionLostEachDay = 0;
 
-    private int _currentHealth;
-    private int _currentFuel;
-    private int _currentMotorcycleCondition;
+    public int _currentHealth { get; private set; }
+    public int _currentFuel { get; private set; }
+    public int _currentMotorcycleCondition { get; private set; }
     private float _fuelTimer = 0f;
     private bool _isDead = false;
     private bool _isFirstTravel = true;
@@ -97,16 +97,16 @@ public class Motorcyclist : MonoBehaviour
         _healthSlider.SetCurrentValue(_currentHealth);
     }
 
-    public void UpdateMotorcycleCondition(int amount)
+    public bool IsAtMaxHealth()
     {
-        _currentMotorcycleCondition += amount;
-        _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
-    }
-
-    public void MaxOutMotorcycleCondition()
-    {
-        _currentMotorcycleCondition = _maxMotorcycleCondition;
-        _motorcycleConditionSlider.SetCurrentValue(_currentFuel);
+        if (_currentHealth == _maxHealth)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void UpdateFuel(int amount)
@@ -119,6 +119,42 @@ public class Motorcyclist : MonoBehaviour
     {
         _currentFuel = _maxFuel;
         _fuelSlider.SetCurrentValue(_currentFuel);
+    }
+
+    public bool IsAtMaxFuel()
+    {
+        if (_currentFuel == _maxFuel)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void UpdateMotorcycleCondition(int amount)
+    {
+        _currentMotorcycleCondition += amount;
+        _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
+    }
+
+    public void MaxOutMotorcycleCondition()
+    {
+        _currentMotorcycleCondition = _maxMotorcycleCondition;
+        _motorcycleConditionSlider.SetCurrentValue(_currentFuel);
+    }
+
+    public bool IsAtMaxMotorcycleCondition()
+    {
+        if (_currentMotorcycleCondition == _maxMotorcycleCondition)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void CheckIfDead(int type)

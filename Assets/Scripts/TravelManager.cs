@@ -18,6 +18,9 @@ public class TravelManager : MonoBehaviour
     [SerializeField]
     private float _secondEncounter = 15f;
 
+    [SerializeField]
+    private List<TownSO> _towns;
+
     private float _timer = 0f;
     private int _encounterCounter = 0;
 
@@ -64,4 +67,12 @@ public class TravelManager : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public TownSO GetNextTown()
+    {
+        TownSO currentTown = _towns[0];
+        _towns.RemoveAt(0);
+        return currentTown;
+    }
+
 }
