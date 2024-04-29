@@ -51,4 +51,14 @@ public class SliderBar : MonoBehaviour
         _fill.color = _gradient.Evaluate(_slider.normalizedValue);
         _valueText.text = value + "/" + _slider.maxValue;
     }
+
+    /*
+        Set up slider when using slider within shops.
+    */
+    public void SetupSlider(int value)
+    {
+        SetCurrentValue(value);
+        _labelTMP.text = _labelText;
+        _iconImage.sprite = _iconSprite;
+    }
 }

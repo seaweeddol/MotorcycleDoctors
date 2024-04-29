@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
     Parent game object for motorcyclist stats and overall stats.
@@ -23,6 +24,7 @@ public class TravelManager : MonoBehaviour
 
     private float _timer = 0f;
     private int _encounterCounter = 0;
+    private bool _isInTown;
 
     void Awake()
     {
@@ -40,7 +42,7 @@ public class TravelManager : MonoBehaviour
 
     void Update()
     {
-        if (_encounterManager.CheckIfActive()) return;
+        if (_encounterManager.CheckIfActive() || _isInTown) return;
 
         _timer += Time.deltaTime;
 
@@ -60,6 +62,8 @@ public class TravelManager : MonoBehaviour
             Debug.Log("travel segment completed");
             _timer = 0f;
             _encounterCounter = 0;
+            SceneManager.LoadScene(1);
+            // TODO: pause timer while in shop
         }
     }
 
@@ -68,11 +72,30 @@ public class TravelManager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void SetInTown(bool isInTown)
+    {
+        _isInTown = isInTown;
+    }
+
+    public bool IsInTown()
+    {
+        return _isInTown;
+    }
+
     public TownSO GetNextTown()
     {
-        TownSO currentTown = _towns[0];
-        _towns.RemoveAt(0);
-        return currentTown;
+        if (_towns.Count > 0)
+        {
+            TownSO currentTown = _towns[0];
+            _towns.RemoveAt(0);
+            _isInTown = true;
+            return currentTown;
+        }
+        else
+        {
+            Debug.Log("No towns left;");
+            return null;
+        }
     }
 
 }

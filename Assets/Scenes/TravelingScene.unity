@@ -17307,9 +17307,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _travelLength
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _firstEncounter
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _secondEncounter
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _encounterManager
       value: 
       objectReference: {fileID: 1751122409}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b4931bdc77e0d3c45baecd3431740aa1, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ff4938a1ae44cf409d240a1b258b8f2, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6592603fc4ed2cf48921e0a7e65e13a3, type: 2}
     - target: {fileID: 7837919733615975487, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

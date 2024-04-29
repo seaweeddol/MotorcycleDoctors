@@ -33,9 +33,19 @@ public class Shop : MonoBehaviour
         _currentTown = FindObjectOfType<Town>()._currentTown;
     }
 
-    public void SetMotorcycle(Motorcyclist motorcyclist)
+    public void SetMotorcyclist(Motorcyclist motorcyclist)
     {
         _motorcyclist = motorcyclist;
+        _name.text = _motorcyclist.GetName();
+
+        // TODO: sliders are not updating to use provided slider, need to troubleshoot
+        _healthSlider = _motorcyclist.GetHealthSlider();
+        _fuelSlider = _motorcyclist.GetFuelSlider();
+        _motorcycleConditionSlider = _motorcyclist.GetMotorcycleSlider();
+
+        _healthSlider.SetupSlider(_motorcyclist._currentHealth);
+        _fuelSlider.SetupSlider(_motorcyclist._currentFuel);
+        _motorcycleConditionSlider.SetupSlider(_motorcyclist._currentMotorcycleCondition);
     }
 
     public void BuyHealth()
@@ -48,6 +58,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            Debug.Log("already at full health, or not enough money");
             // TODO display some UI, or disable button
         }
     }
@@ -62,6 +73,7 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            Debug.Log("already at full fuel, or not enough money");
             // TODO display some UI, or disable button
         }
     }
@@ -76,9 +88,8 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            Debug.Log("already at full motorcycle condition, or not enough money");
             // TODO display some UI, or disable button
         }
     }
-
-
 }

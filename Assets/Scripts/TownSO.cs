@@ -11,6 +11,9 @@ public class TownSO : ScriptableObject
     [field: SerializeField]
     public string TownDescription { get; private set; }
 
+    [field: SerializeField]
+    public int MoneyOnArrival { get; private set; }
+
     /*
     Medicine and ammo are only available in the first shop.
     */
@@ -19,14 +22,11 @@ public class TownSO : ScriptableObject
     [field: SerializeField]
     public int MedicineCost { get; private set; }
     [field: SerializeField]
-    public int MedicingAmount { get; private set; }
+    public int MedicineAmount { get; private set; }
     [field: SerializeField]
     public int AmmoCost { get; private set; }
     [field: SerializeField]
     public int AmmoAmount { get; private set; }
-
-    [field: SerializeField]
-    public int MoneyOnArrival { get; private set; }
 
     [field: SerializeField]
     public int HealthCost { get; private set; }

@@ -41,14 +41,14 @@ public class Motorcyclist : MonoBehaviour
     [SerializeField]
     private int _motorcycleConditionLostEachDay = 0;
 
+    private TravelManager _travelManager;
+
     public int _currentHealth { get; private set; }
     public int _currentFuel { get; private set; }
     public int _currentMotorcycleCondition { get; private set; }
     private float _fuelTimer = 0f;
     private bool _isDead = false;
     private bool _isFirstTravel = true;
-
-    private float timer = 0f;
 
     private int _HEALTH = 0;
     private int _FUEL = 1;
@@ -65,23 +65,23 @@ public class Motorcyclist : MonoBehaviour
         _healthSlider.SetMaxValue(_maxHealth);
         _fuelSlider.SetMaxValue(_maxFuel);
         _motorcycleConditionSlider.SetMaxValue(_maxMotorcycleCondition);
+
+        _travelManager = FindObjectOfType<TravelManager>();
     }
 
     void Update()
     {
+        if (_travelManager.IsInTown())
+        {
+            _fuelTimer = 0;
+            return;
+        }
+
         _fuelTimer += Time.deltaTime;
-        timer += Time.deltaTime;
         if (_fuelTimer >= _fuelDrainTimer)
         {
             _fuelTimer = 0;
             UpdateFuel(-1);
-        }
-
-        if (timer >= 6f)
-        {
-            timer = 0f;
-            Debug.Log("reloading");
-            SceneManager.LoadScene(0);
         }
     }
 
@@ -155,6 +155,26 @@ public class Motorcyclist : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public string GetName()
+    {
+        return _motorcyclistName;
+    }
+
+    public SliderBar GetHealthSlider()
+    {
+        return _healthSlider;
+    }
+
+    public SliderBar GetFuelSlider()
+    {
+        return _fuelSlider;
+    }
+
+    public SliderBar GetMotorcycleSlider()
+    {
+        return _motorcycleConditionSlider;
     }
 
     private void CheckIfDead(int type)

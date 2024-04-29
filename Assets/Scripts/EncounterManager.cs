@@ -57,13 +57,14 @@ public class EncounterManager : MonoBehaviour
                 DisableEncounter();
             }
         }
-        else
-        {
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                EnableEncounter();
-            }
-        }
+        // for testing purposes:
+        // else
+        // {
+        //     if (Input.GetKeyUp(KeyCode.Space))
+        //     {
+        //         EnableEncounter();
+        //     }
+        // }
     }
 
     public void ResetEncounterManager()

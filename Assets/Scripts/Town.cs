@@ -48,17 +48,24 @@ public class Town : MonoBehaviour
             {
                 _welcomeGO.SetActive(false);
                 _shopGO.SetActive(true);
-                // TODO set up shop
+                SetupShop();
             }
         }
     }
 
     void SetupShop()
     {
+        // TODO: need to hide traveling UI while in shop
+
         foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
         {
             GameObject motorcyclistShop = Instantiate(_motorcyclistShopGO, _motorcyclistShopParent.transform);
-
+            motorcyclistShop.GetComponent<Shop>().SetMotorcyclist(motorcyclist);
         }
+    }
+
+    public void LeaveTown()
+    {
+        _travelManager.SetInTown(false);
     }
 }
