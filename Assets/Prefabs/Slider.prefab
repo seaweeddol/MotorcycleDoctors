@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1905792896355009805}
   - component: {fileID: 8137100867012190780}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 5452431690575808052}
   - component: {fileID: 6063081179554589761}
   m_Layer: 5
-  m_Name: Health bar
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,6 +287,11 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   _fill: {fileID: 4611060361083405810}
+  _labelTMP: {fileID: 1514385689024174022}
+  _labelText: 
+  _iconImage: {fileID: 8137100867012190780}
+  _iconSprite: {fileID: 0}
+  _valueText: {fileID: 7029911596659696510}
 --- !u!1 &8257488743779921403
 GameObject:
   m_ObjectHideFlags: 0
