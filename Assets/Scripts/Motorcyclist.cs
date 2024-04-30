@@ -83,7 +83,7 @@ public class Motorcyclist : MonoBehaviour
 
     void Update()
     {
-        if (_travelManager.IsInTown())
+        if (_travelManager.IsInTown() || _travelManager.IsInEncounter())
         {
             _fuelTimer = 0;
             return;

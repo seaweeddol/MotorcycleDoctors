@@ -80,13 +80,18 @@ public class TravelManager : MonoBehaviour
         return _isInTown;
     }
 
+    public bool IsInEncounter()
+    {
+        return _encounterManager.CheckIfActive();
+    }
+
     public TownSO GetNextTown()
     {
         if (_towns.Count > 0)
         {
+            _isInTown = true;
             TownSO currentTown = _towns[0];
             _towns.RemoveAt(0);
-            _isInTown = true;
             return currentTown;
         }
         else
