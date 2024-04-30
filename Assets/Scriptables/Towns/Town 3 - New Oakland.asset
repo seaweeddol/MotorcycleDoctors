@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18145be393de772499f28ab13b37cfa6, type: 3}
   m_Name: Town 3 - New Oakland
   m_EditorClassIdentifier: 
-  <TownName>k__BackingField: 
-  <TownDescription>k__BackingField: 
-  <MoneyOnArrival>k__BackingField: 0
+  <TownName>k__BackingField: New Oakland
+  <TownDescription>k__BackingField: "With San Francisco gone, Oakland finally took
+    its place as the jewel of the Bay Area. Once an unappreciated city rife with
+    gangs and crime, Oakland rose to the position of power in Northern California,
+    finally taking it\u2019s place as an appreciated city rife with gangs and crime."
+  <MoneyOnArrival>k__BackingField: 15
   <isFirstShop>k__BackingField: 0
   <MedicineCost>k__BackingField: 0
   <MedicineAmount>k__BackingField: 0
   <AmmoCost>k__BackingField: 0
   <AmmoAmount>k__BackingField: 0
-  <HealthCost>k__BackingField: 0
-  <HealthAmount>k__BackingField: 0
-  <FuelCost>k__BackingField: 0
-  <FuelAmount>k__BackingField: 0
-  <RepairCost>k__BackingField: 0
-  <RepairAmount>k__BackingField: 0
+  <HealthCost>k__BackingField: 10
+  <HealthAmount>k__BackingField: 1
+  <FuelCost>k__BackingField: 15
+  <FuelAmount>k__BackingField: 10
+  <RepairCost>k__BackingField: 20
+  <RepairAmount>k__BackingField: 1

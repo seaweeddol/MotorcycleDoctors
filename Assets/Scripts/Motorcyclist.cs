@@ -100,7 +100,14 @@ public class Motorcyclist : MonoBehaviour
     public void UpdateHealth(int amount)
     {
         _currentHealth += amount;
-        _healthSlider.SetCurrentValue(_currentHealth);
+        if (_currentHealth > _maxHealth)
+        {
+            MaxOutHealth();
+        }
+        else
+        {
+            _healthSlider.SetCurrentValue(_currentHealth);
+        }
     }
 
     public void MaxOutHealth()
@@ -124,7 +131,14 @@ public class Motorcyclist : MonoBehaviour
     public void UpdateFuel(int amount)
     {
         _currentFuel += amount;
-        _fuelSlider.SetCurrentValue(_currentFuel);
+        if (_currentFuel > _maxFuel)
+        {
+            MaxOutFuel();
+        }
+        else
+        {
+            _fuelSlider.SetCurrentValue(_currentFuel);
+        }
     }
 
     public void MaxOutFuel()
@@ -148,7 +162,14 @@ public class Motorcyclist : MonoBehaviour
     public void UpdateMotorcycleCondition(int amount)
     {
         _currentMotorcycleCondition += amount;
-        _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
+        if (_currentMotorcycleCondition > _maxMotorcycleCondition)
+        {
+            MaxOutMotorcycleCondition();
+        }
+        else
+        {
+            _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
+        }
     }
 
     public void MaxOutMotorcycleCondition()

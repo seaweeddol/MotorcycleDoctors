@@ -44,6 +44,8 @@ public class Shop : MonoBehaviour
     {
         if (_groupStats.HasEnoughMoney(_currentTown.HealthCost) && !_motorcyclist.IsAtMaxHealth())
         {
+            Debug.Log("buying health");
+
             _groupStats.UpdateMoney(-_currentTown.HealthCost);
             _motorcyclist.UpdateHealth(_currentTown.HealthAmount);
             _healthParent.GetComponentInChildren<SliderBar>().SetCurrentValue(_motorcyclist._currentHealth);
@@ -59,6 +61,7 @@ public class Shop : MonoBehaviour
     {
         if (_groupStats.HasEnoughMoney(_currentTown.FuelCost) && !_motorcyclist.IsAtMaxFuel())
         {
+            Debug.Log("buying fuel");
             _groupStats.UpdateMoney(-_currentTown.FuelCost);
             _motorcyclist.UpdateFuel(_currentTown.FuelAmount);
             _fuelparent.GetComponentInChildren<SliderBar>().SetCurrentValue(_motorcyclist._currentFuel);
@@ -74,6 +77,8 @@ public class Shop : MonoBehaviour
     {
         if (_groupStats.HasEnoughMoney(_currentTown.RepairCost) && !_motorcyclist.IsAtMaxMotorcycleCondition())
         {
+            Debug.Log("repairing motorcycle");
+
             _groupStats.UpdateMoney(-_currentTown.RepairCost);
             _motorcyclist.UpdateMotorcycleCondition(_currentTown.RepairAmount);
             _motorcycleParent.GetComponentInChildren<SliderBar>().SetCurrentValue(_motorcyclist._currentMotorcycleCondition);
