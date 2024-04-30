@@ -58,12 +58,10 @@ public class TravelManager : MonoBehaviour
         }
         else if (_timer >= _travelLength)
         {
-            // TODO: end travel, show next town interface
             Debug.Log("travel segment completed");
             _timer = 0f;
             _encounterCounter = 0;
             SceneManager.LoadScene(1);
-            // TODO: pause timer while in shop
         }
     }
 

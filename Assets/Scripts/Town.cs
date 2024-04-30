@@ -56,6 +56,7 @@ public class Town : MonoBehaviour
     void SetupShop()
     {
         // TODO: need to hide traveling UI while in shop
+        // TODO: need to show money while in shop
 
         foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
         {
@@ -67,5 +68,6 @@ public class Town : MonoBehaviour
     public void LeaveTown()
     {
         _travelManager.SetInTown(false);
+        // TODO: move sliders back to travelManager
     }
 }

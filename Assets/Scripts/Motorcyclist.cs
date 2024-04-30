@@ -23,10 +23,22 @@ public class Motorcyclist : MonoBehaviour
     private TextMeshProUGUI _nameText;
 
     [SerializeField]
+    private GameObject _motorcycleStatsParent;
+
+    [SerializeField]
+    private GameObject _healthSliderGO;
+
+    [SerializeField]
     private SliderBar _healthSlider;
 
     [SerializeField]
+    private GameObject _fuelSliderGO;
+
+    [SerializeField]
     private SliderBar _fuelSlider;
+
+    [SerializeField]
+    private GameObject _motorcycleSliderGO;
 
     [SerializeField]
     private SliderBar _motorcycleConditionSlider;
@@ -179,6 +191,7 @@ public class Motorcyclist : MonoBehaviour
 
     private void CheckIfDead(int type)
     {
+        //TODO: if motorcyclist is dead, remove their gameObject from TravelManager,
         if (_isDead) return;
 
         switch (type)
@@ -202,6 +215,22 @@ public class Motorcyclist : MonoBehaviour
                 }
                 break;
         }
+    }
 
+    public void SetParentsOfSliders(Transform healthParent, Transform fuelParent, Transform motorcycleParent)
+    {
+        _healthSliderGO.transform.SetParent(healthParent);
+        _healthSliderGO.transform.SetAsFirstSibling();
+        _fuelSliderGO.transform.SetParent(fuelParent);
+        _fuelSliderGO.transform.SetAsFirstSibling();
+        _motorcycleSliderGO.transform.SetParent(motorcycleParent);
+        _motorcycleSliderGO.transform.SetAsFirstSibling();
+    }
+
+    public void ResetSliderParents()
+    {
+        _healthSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
+        _fuelSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
+        _motorcycleSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
     }
 }

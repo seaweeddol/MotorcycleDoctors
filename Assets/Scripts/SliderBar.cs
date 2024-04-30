@@ -30,7 +30,6 @@ public class SliderBar : MonoBehaviour
     [SerializeField]
     private Sprite _iconSprite;
 
-
     void Start()
     {
         _labelTMP.text = _labelText;
@@ -50,15 +49,5 @@ public class SliderBar : MonoBehaviour
         _slider.value = value;
         _fill.color = _gradient.Evaluate(_slider.normalizedValue);
         _valueText.text = value + "/" + _slider.maxValue;
-    }
-
-    /*
-        Set up slider when using slider within shops.
-    */
-    public void SetupSlider(int value)
-    {
-        SetCurrentValue(value);
-        _labelTMP.text = _labelText;
-        _iconImage.sprite = _iconSprite;
     }
 }
