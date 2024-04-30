@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
-  m_Name: Bundle1_2 Option2_Encounter
+  m_Name: Bundle2_1
   m_EditorClassIdentifier: 
-  <EncounterText>k__BackingField: "You decide the risk is worth it and grab the Medicine.
-    Just as you do, a group of Dentists ambush you and shoot at you twice. One shot
-    hits one of you in the arm, and the other hits one of the Motorcycles. However,
-    you\u2019re able to get away with the Medicine."
+  <EncounterText>k__BackingField: "You\u2019re not gonna believe this, but one of
+    you has dysentery. They now lose additional health after each day of travel.
+    Ain\u2019t that just the way."
   <EncounterOptions>k__BackingField: []
   <FillMaxHealth>k__BackingField: 0
-  <HealthChange>k__BackingField: -1
+  <HealthChange>k__BackingField: 0
   <IsAllHealthAffected>k__BackingField: 0
   <FillMaxMotorcycleCondition>k__BackingField: 0
   <MotorcycleConditionChange>k__BackingField: 0
@@ -28,4 +27,4 @@ MonoBehaviour:
   <IsAllFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
-  <MedicineChange>k__BackingField: 1
+  <MedicineChange>k__BackingField: 0

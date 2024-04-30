@@ -49,8 +49,7 @@ public class EncounterManager : MonoBehaviour
 
     void Update()
     {
-        // if (_encounterParent.activeSelf && _continuePrompt.activeSelf)
-        if (_encounterParent.activeSelf)
+        if (_encounterParent.activeSelf && _continuePrompt.activeSelf)
         {
             if (Input.GetKeyUp(KeyCode.Space))
             {

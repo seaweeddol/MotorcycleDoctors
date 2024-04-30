@@ -195,21 +195,6 @@ public class Motorcyclist : MonoBehaviour
         return _motorcyclistName;
     }
 
-    public SliderBar GetHealthSlider()
-    {
-        return _healthSlider;
-    }
-
-    public SliderBar GetFuelSlider()
-    {
-        return _fuelSlider;
-    }
-
-    public SliderBar GetMotorcycleSlider()
-    {
-        return _motorcycleConditionSlider;
-    }
-
     private void CheckIfDead(int type)
     {
         //TODO: if motorcyclist is dead, remove their gameObject from TravelManager,

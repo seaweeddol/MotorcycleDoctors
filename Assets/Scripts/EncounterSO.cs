@@ -12,6 +12,7 @@ public class EncounterSO : ScriptableObject
     [field: SerializeField]
     public List<EncounterOptionSO> EncounterOptions { get; private set; } = null;
 
+    //TODO add ongoing effects
     [field: SerializeField]
     public bool FillMaxHealth { get; private set; }
     [field: SerializeField]
