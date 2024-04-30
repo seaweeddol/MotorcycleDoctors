@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Town : MonoBehaviour
 {
@@ -68,6 +69,11 @@ public class Town : MonoBehaviour
     public void LeaveTown()
     {
         _travelManager.SetInTown(false);
-        // TODO: move sliders back to travelManager
+        foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
+        {
+            motorcyclist.ResetSliderParents();
+        }
+        SceneManager.LoadScene(0);
     }
+
 }
