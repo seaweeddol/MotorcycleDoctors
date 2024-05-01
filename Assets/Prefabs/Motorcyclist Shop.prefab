@@ -564,7 +564,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500.77, y: 481.975}
+  m_SizeDelta: {x: 480, y: 481.975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7949513168549673514
 MonoBehaviour:
@@ -1685,8 +1685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 520.771, y: 646.691}
+  m_AnchoredPosition: {x: 0, y: 32.121704}
+  m_SizeDelta: {x: 500, y: 582.4476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6596073027763104604
 MonoBehaviour:
@@ -1703,10 +1703,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 20
     m_Right: 20
-    m_Top: 20
+    m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 50
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -1727,6 +1727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: {fileID: 7518618182748040822}
+  _ammoCostText: {fileID: 0}
+  _medicineCostText: {fileID: 0}
   _healthCostText: {fileID: 7714960314200030620}
   _healthParent: {fileID: 4782389815209475509}
   _fuelCostText: {fileID: 8478617291621649240}

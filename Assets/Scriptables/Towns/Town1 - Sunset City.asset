@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18145be393de772499f28ab13b37cfa6, type: 3}
   m_Name: Town1 - Sunset City
   m_EditorClassIdentifier: 
+  <IsFinalTown>k__BackingField: 0
   <TownName>k__BackingField: Sunset City
   <TownDescription>k__BackingField: After Los Angeles fell and its surviving population
     split into multiple new communities, the remaining Hollywood elite pooled their
     resources, power, and influence and turned Hollywood into Sunset City, a shining
     (and wildly corrupt) beacon of humanity.
-  <MoneyOnArrival>k__BackingField: 50
+  <MoneyOnArrival>k__BackingField: 0
   <isFirstShop>k__BackingField: 1
   <MedicineCost>k__BackingField: 20
   <MedicineAmount>k__BackingField: 1
