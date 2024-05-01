@@ -20,19 +20,30 @@ public class Town : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _townName;
     [SerializeField]
+    private GameObject _firstShopGO;
+    [SerializeField]
+    private Transform _moneyParent;
+    [SerializeField]
+    private Transform _ammoParent;
+    [SerializeField]
+    private Transform _medicineParent;
+    [SerializeField]
     private GameObject _motorcyclistShopParent;
     [SerializeField]
     private GameObject _motorcyclistShopGO;
 
     private TravelManager _travelManager;
     private EncounterManager _encounterManager;
+    private GroupStats _groupStats;
 
     public TownSO _currentTown { get; private set; }
 
     void Start()
     {
+        Debug.Log("entered town");
         _travelManager = FindObjectOfType<TravelManager>();
         _encounterManager = FindObjectOfType<EncounterManager>();
+        _groupStats = FindObjectOfType<GroupStats>();
 
         _currentTown = _travelManager.GetNextTown();
 
@@ -41,6 +52,8 @@ public class Town : MonoBehaviour
         _townDescription.text = _currentTown.TownDescription;
 
         _townName.text = _currentTown.TownName + " Shop";
+
+        _groupStats.UpdateMoney(_currentTown.MoneyOnArrival);
     }
 
     void Update()
@@ -61,22 +74,44 @@ public class Town : MonoBehaviour
         // TODO: need to hide traveling UI while in shop
         // TODO: need to show money while in shop
 
-        foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
+        if (_currentTown.isFirstShop)
         {
-            GameObject motorcyclistShop = Instantiate(_motorcyclistShopGO, _motorcyclistShopParent.transform);
-            motorcyclistShop.GetComponent<Shop>().SetMotorcyclist(motorcyclist);
+            // set up first shop
+            _firstShopGO.SetActive(true);
         }
-    }
-    public void LeaveTown()
-    {
-        foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
+        else
         {
-            motorcyclist.ResetSliderParents();
+            Debug.Log("setting up motorcyclist shops");
+            _motorcyclistShopParent.SetActive(true);
+            foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
+            {
+                GameObject motorcyclistShop = Instantiate(_motorcyclistShopGO, _motorcyclistShopParent.transform);
+                motorcyclistShop.GetComponent<Shop>().SetMotorcyclist(motorcyclist);
+            }
         }
 
-        for (int i = 0; i < _motorcyclistShopParent.transform.childCount; i++)
+        _groupStats.SetParentsOfStats(_moneyParent, _ammoParent, _medicineParent);
+    }
+
+    public void LeaveTown()
+    {
+        _groupStats.ResetStatParents();
+
+        if (_currentTown.isFirstShop)
         {
-            Destroy(_motorcyclistShopParent.transform.GetChild(0).gameObject);
+            _firstShopGO.SetActive(false);
+        }
+        else
+        {
+            foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
+            {
+                motorcyclist.ResetSliderParents();
+            }
+
+            for (int i = 0; i < _motorcyclistShopParent.transform.childCount; i++)
+            {
+                Destroy(_motorcyclistShopParent.transform.GetChild(0).gameObject);
+            }
         }
 
         _travelManager.SetInTown(false);

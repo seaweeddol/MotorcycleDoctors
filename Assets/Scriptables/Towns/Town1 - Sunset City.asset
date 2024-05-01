@@ -17,12 +17,12 @@ MonoBehaviour:
     split into multiple new communities, the remaining Hollywood elite pooled their
     resources, power, and influence and turned Hollywood into Sunset City, a shining
     (and wildly corrupt) beacon of humanity.
-  <MoneyOnArrival>k__BackingField: 0
+  <MoneyOnArrival>k__BackingField: 50
   <isFirstShop>k__BackingField: 1
   <MedicineCost>k__BackingField: 20
-  <MedicineAmount>k__BackingField: 0
+  <MedicineAmount>k__BackingField: 1
   <AmmoCost>k__BackingField: 5
-  <AmmoAmount>k__BackingField: 1
+  <AmmoAmount>k__BackingField: 10
   <HealthCost>k__BackingField: 0
   <HealthAmount>k__BackingField: 0
   <FuelCost>k__BackingField: 0

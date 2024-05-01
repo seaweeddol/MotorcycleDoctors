@@ -16332,6 +16332,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945125410646437444, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _ammo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945125410646437444, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _money
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945125410646437444, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _medicine
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945125410646437444, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _moneyParent
+      value: 
+      objectReference: {fileID: 5278782182701943587}
     - target: {fileID: 4974208881064548635, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _fuelSlider
       value: 
@@ -16558,16 +16574,16 @@ PrefabInstance:
       objectReference: {fileID: 1751122409}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 2ff4938a1ae44cf409d240a1b258b8f2, type: 2}
+      objectReference: {fileID: 11400000, guid: b4931bdc77e0d3c45baecd3431740aa1, type: 2}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 6592603fc4ed2cf48921e0a7e65e13a3, type: 2}
+      objectReference: {fileID: 11400000, guid: 2ff4938a1ae44cf409d240a1b258b8f2, type: 2}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.data[2]
       value: 
@@ -16716,6 +16732,11 @@ PrefabInstance:
 --- !u!224 &5278782182701943586 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5094822266794760345, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+  m_PrefabInstance: {fileID: 5278782182701943585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5278782182701943587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7252659832685823203, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
   m_PrefabInstance: {fileID: 5278782182701943585}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

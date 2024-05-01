@@ -25,6 +25,7 @@ public class TravelManager : MonoBehaviour
     private float _timer = 0f;
     private int _encounterCounter = 0;
     private bool _isInTown;
+    private bool _isFirstTown = true;
 
     void Awake()
     {
@@ -42,6 +43,11 @@ public class TravelManager : MonoBehaviour
 
     void Update()
     {
+        if (_isFirstTown) {
+            _isFirstTown = false;
+            SceneManager.LoadScene(1);
+        }
+
         if (_encounterManager.CheckIfActive() || _isInTown) return;
 
         _timer += Time.deltaTime;
@@ -58,7 +64,6 @@ public class TravelManager : MonoBehaviour
         }
         else if (_timer >= _travelLength)
         {
-            Debug.Log("travel segment completed");
             _timer = 0f;
             _encounterCounter = 0;
             SceneManager.LoadScene(1);
@@ -100,5 +105,4 @@ public class TravelManager : MonoBehaviour
             return null;
         }
     }
-
 }

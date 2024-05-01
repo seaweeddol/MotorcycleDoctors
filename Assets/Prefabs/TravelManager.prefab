@@ -120,7 +120,10 @@ MonoBehaviour:
   _travelLength: 20
   _firstEncounter: 5
   _secondEncounter: 15
-  _towns: []
+  _towns:
+  - {fileID: 11400000, guid: b4931bdc77e0d3c45baecd3431740aa1, type: 2}
+  - {fileID: 11400000, guid: 2ff4938a1ae44cf409d240a1b258b8f2, type: 2}
+  - {fileID: 11400000, guid: 6592603fc4ed2cf48921e0a7e65e13a3, type: 2}
 --- !u!1 &1493720921365843971
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,8 +585,12 @@ MonoBehaviour:
   _money: 20
   _ammo: 20
   _medicine: 2
+  _statsParent: {fileID: 4824432738881424332}
+  _moneyGO: {fileID: 7252659832685823203}
   _moneyText: {fileID: 2024258252467965819}
+  _ammoGO: {fileID: 9168347480049476039}
   _ammoText: {fileID: 4894789974850932802}
+  _medicineGO: {fileID: 1493720921365843971}
   _medicineText: {fileID: 7662878989484239040}
 --- !u!1 &4861317918262645791
 GameObject:

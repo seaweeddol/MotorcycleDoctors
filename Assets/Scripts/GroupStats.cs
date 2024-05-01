@@ -13,9 +13,19 @@ public class GroupStats : MonoBehaviour
     private int _medicine = 2;
 
     [SerializeField]
+    private GameObject _statsParent;
+    [SerializeField]
+    private GameObject _moneyGO;
+    [SerializeField]
     private TextMeshProUGUI _moneyText;
+
+    [SerializeField]
+    private GameObject _ammoGO;
     [SerializeField]
     private TextMeshProUGUI _ammoText;
+
+    [SerializeField]
+    private GameObject _medicineGO;
     [SerializeField]
     private TextMeshProUGUI _medicineText;
 
@@ -55,5 +65,19 @@ public class GroupStats : MonoBehaviour
         {
             return true;
         }
+    }
+
+    public void SetParentsOfStats(Transform moneyParent, Transform ammoParent, Transform medicineParent)
+    {
+        _moneyGO.transform.SetParent(moneyParent);
+        _ammoGO.transform.SetParent(ammoParent);
+        _medicineGO.transform.SetParent(medicineParent);
+    }
+
+    public void ResetStatParents()
+    {
+        _moneyGO.transform.SetParent(_statsParent.transform);
+        _ammoGO.transform.SetParent(_statsParent.transform);
+        _medicineGO.transform.SetParent(_statsParent.transform);
     }
 }

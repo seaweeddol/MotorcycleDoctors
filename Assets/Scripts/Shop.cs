@@ -8,6 +8,13 @@ public class Shop : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _name;
 
+    [Header("First Shop Setup")]
+    [SerializeField]
+    private TextMeshProUGUI _ammoCostText;
+    [SerializeField]
+    private TextMeshProUGUI _medicineCostText;
+
+    [Header("Subsequent Shop Setup")]
     [SerializeField]
     private TextMeshProUGUI _healthCostText;
     [SerializeField]
@@ -31,9 +38,18 @@ public class Shop : MonoBehaviour
     {
         _groupStats = FindObjectOfType<GroupStats>();
         _currentTown = FindObjectOfType<Town>()._currentTown;
-        _healthCostText.text = "$" + _currentTown.HealthCost + " for " + _currentTown.HealthAmount + " Health";
-        _fuelCostText.text = "$" + _currentTown.FuelCost + " for " + _currentTown.FuelAmount + " Fuel";
-        _motorcycleCostText.text = "$" + _currentTown.RepairCost + " for " + _currentTown.RepairAmount + " Repair";
+
+        if (_currentTown.isFirstShop)
+        {
+            _ammoCostText.text = "$" + _currentTown.AmmoCost + " for " + _currentTown.AmmoAmount + " Ammo";
+            _medicineCostText.text = "$" + _currentTown.MedicineCost + " for " + _currentTown.MedicineAmount + " Medicine";
+        }
+        else
+        {
+            _healthCostText.text = "$" + _currentTown.HealthCost + " for " + _currentTown.HealthAmount + " Health";
+            _fuelCostText.text = "$" + _currentTown.FuelCost + " for " + _currentTown.FuelAmount + " Fuel";
+            _motorcycleCostText.text = "$" + _currentTown.RepairCost + " for " + _currentTown.RepairAmount + " Repair";
+        }
     }
 
     public void SetMotorcyclist(Motorcyclist motorcyclist)
@@ -89,6 +105,36 @@ public class Shop : MonoBehaviour
         else
         {
             Debug.Log("already at full motorcycle condition, or not enough money");
+            // TODO display some UI, or disable button
+        }
+    }
+
+    public void BuyAmmo()
+    {
+        if (_groupStats.HasEnoughMoney(_currentTown.AmmoCost))
+        {
+            Debug.Log("buying ammo");
+            _groupStats.UpdateMoney(-_currentTown.AmmoCost);
+            _groupStats.UpdateAmmo(_currentTown.AmmoAmount);
+        }
+        else
+        {
+            Debug.Log("not enough money");
+            // TODO display some UI, or disable button
+        }
+    }
+
+    public void BuyMedicine()
+    {
+        if (_groupStats.HasEnoughMoney(_currentTown.MedicineCost))
+        {
+            Debug.Log("buying ammo");
+            _groupStats.UpdateMoney(-_currentTown.MedicineCost);
+            _groupStats.UpdateMedicine(_currentTown.MedicineAmount);
+        }
+        else
+        {
+            Debug.Log("not enough money");
             // TODO display some UI, or disable button
         }
     }
