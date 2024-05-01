@@ -15820,6 +15820,54 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1827713588}
     - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b0d6e4dcd0d5884da886b1224149556, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6577702ba6bc9024991f3b978339981c, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c02a9e0715d3ab844972ff797f83d38d, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: fbf1ce59d2785ce42a0a478ef207a2dd, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: b9d35dfe332bb5d449d763e1b8104925, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5aa65089201711442b4d88a917123fcf, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 69eb42fb30af4f942815c7b7b29e75ca, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 02f11c7f451ac65449e1e742facf64bc, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 278d8af6dd5615a46b25eed47b8ea8c0, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 282e747ab4ff06443bd86278579eb5f6, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: _encounters.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: d8b3ec1aed6550c408be21ca973f5de1, type: 2}
+    - target: {fileID: 2978064512147914352, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
       propertyPath: _motorcyclists.Array.data[0]
       value: 
       objectReference: {fileID: 0}

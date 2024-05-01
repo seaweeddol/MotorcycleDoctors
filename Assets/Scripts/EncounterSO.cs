@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Encounter", fileName = "New Encounter")]
 public class EncounterSO : ScriptableObject
 {
+    [field: SerializeField]
+    public bool IsFinalEncounter { get; private set; }
 
     // TODO add way to insert specific name within Encounter Text
 
@@ -43,4 +45,7 @@ public class EncounterSO : ScriptableObject
     public int AmmoChange { get; private set; }
     [field: SerializeField]
     public int MedicineChange { get; private set; }
+
+    // TODO: add way to affect money/ammo/medicine by percentage
+    // TODO: add way to determine outcome of encounter based on current stats
 }

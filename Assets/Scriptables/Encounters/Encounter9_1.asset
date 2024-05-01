@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
+  m_Name: Encounter9_1
+  m_EditorClassIdentifier: 
+  <EncounterText>k__BackingField: "You pass a highway roadblock setup by a rival
+    gang. They target your fuel tanks as you ride by, shooting holes into all of
+    them. Thankfully, you get away unharmed but you have to ride for a few miles
+    while leaking fuel so they don\u2019t catch up to you. You\u2019re able to patch
+    the damage, but not before you all lose some fuel."
+  <EncounterOptions>k__BackingField: []
+  <FillMaxHealth>k__BackingField: 0
+  <HealthChange>k__BackingField: 0
+  <IsAllHealthAffected>k__BackingField: 0
+  <FillMaxMotorcycleCondition>k__BackingField: 0
+  <MotorcycleConditionChange>k__BackingField: 0
+  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <FillMaxFuel>k__BackingField: 0
+  <FuelChange>k__BackingField: -7
+  <IsAllFuelAffected>k__BackingField: 1
+  <MoneyChange>k__BackingField: 0
+  <AmmoChange>k__BackingField: 0
+  <MedicineChange>k__BackingField: 0

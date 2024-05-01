@@ -56,14 +56,6 @@ public class EncounterManager : MonoBehaviour
                 DisableEncounter();
             }
         }
-        // for testing purposes:
-        // else
-        // {
-        //     if (Input.GetKeyUp(KeyCode.Space))
-        //     {
-        //         EnableEncounter();
-        //     }
-        // }
     }
 
     public void ResetEncounterManager()
@@ -109,7 +101,6 @@ public class EncounterManager : MonoBehaviour
             _optionParent.SetActive(true);
             foreach (EncounterOptionSO encounterOption in _currentEncounter.EncounterOptions)
             {
-                Debug.Log(encounterOption);
                 GameObject option = Instantiate(_optionPrefab, _optionParent.transform);
                 option.GetComponent<EncounterOption>().SetEncounter(encounterOption.Encounter);
                 option.GetComponentInChildren<TextMeshProUGUI>().text = encounterOption.OptionText;
@@ -220,30 +211,4 @@ public class EncounterManager : MonoBehaviour
             return false;
         }
     }
-
-    /*
-    encounter
-    when it's time for an encounter, grab a random EncounterSO from _encounters
-        remove the encounter from the list
-    instantiate an encounter prefab
-    
-
-
-        initial encounter text
-        [encounter with options]
-            option 1
-                when selected, show option text
-                press space to continue
-            option 2
-                when selected, show option text
-                press space to continue
-        [encounter with no options]
-            press space to continue
-
-    so we basically have two types of encounter screens
-        1. encounter with options
-        2. encounter with no options
-
-
-    */
 }

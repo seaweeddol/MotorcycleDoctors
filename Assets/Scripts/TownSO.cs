@@ -6,6 +6,9 @@ using UnityEngine;
 public class TownSO : ScriptableObject
 {
     [field: SerializeField]
+    public bool IsFinalTown { get; private set; }
+
+    [field: SerializeField]
     public string TownName { get; private set; }
 
     [field: SerializeField]

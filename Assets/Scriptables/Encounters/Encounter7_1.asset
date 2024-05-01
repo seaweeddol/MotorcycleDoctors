@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
+  m_Name: Encounter7_1
+  m_EditorClassIdentifier: 
+  <EncounterText>k__BackingField: You meet a trader who offers you a once-in-a-wasteland
+    deal. For 50 Ammo, he will give you 1 Medicine, 20 Money, spare Motorcycle parts
+    and all the fuel he has left.
+  <EncounterOptions>k__BackingField:
+  - {fileID: 11400000, guid: b7088177a6c66d042964d24c5c4a6bf5, type: 2}
+  - {fileID: 11400000, guid: fe1dfc9acbc6f3747a2f91983fbe7027, type: 2}
+  <FillMaxHealth>k__BackingField: 0
+  <HealthChange>k__BackingField: 0
+  <IsAllHealthAffected>k__BackingField: 0
+  <FillMaxMotorcycleCondition>k__BackingField: 0
+  <MotorcycleConditionChange>k__BackingField: 0
+  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <FillMaxFuel>k__BackingField: 0
+  <FuelChange>k__BackingField: 0
+  <IsAllFuelAffected>k__BackingField: 0
+  <MoneyChange>k__BackingField: 0
+  <AmmoChange>k__BackingField: 0
+  <MedicineChange>k__BackingField: 0

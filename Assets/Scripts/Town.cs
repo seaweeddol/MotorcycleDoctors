@@ -110,6 +110,12 @@ public class Town : MonoBehaviour
             }
         }
 
+        // TODO if leaving final town, need to initialize final encounter
+        if (_currentTown.IsFinalTown)
+        {
+            Debug.Log("is final town");
+        }
+
         _travelManager.SetInTown(false);
         SceneManager.LoadScene(0);
     }
