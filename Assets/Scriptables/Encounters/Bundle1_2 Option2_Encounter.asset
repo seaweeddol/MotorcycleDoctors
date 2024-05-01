@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
   m_Name: Bundle1_2 Option2_Encounter
   m_EditorClassIdentifier: 
+  <IsFinalEncounter>k__BackingField: 0
   <EncounterText>k__BackingField: "You decide the risk is worth it and grab the Medicine.
     Just as you do, a group of Dentists ambush you and shoot at you twice. One shot
     hits one of you in the arm, and the other hits one of the Motorcycles. However,
@@ -21,7 +22,7 @@ MonoBehaviour:
   <HealthChange>k__BackingField: -1
   <IsAllHealthAffected>k__BackingField: 0
   <FillMaxMotorcycleCondition>k__BackingField: 0
-  <MotorcycleConditionChange>k__BackingField: 0
+  <MotorcycleConditionChange>k__BackingField: -1
   <IsAllMotorcycleConditionAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0

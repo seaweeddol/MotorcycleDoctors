@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
   m_Name: Encounter4_1
   m_EditorClassIdentifier: 
+  <IsFinalEncounter>k__BackingField: 0
   <EncounterText>k__BackingField: You and your crew hit a maliciously placed spike
     strip. No one is hurt, but all Motorcycles take some damage.
   <EncounterOptions>k__BackingField: []
@@ -19,8 +20,8 @@ MonoBehaviour:
   <HealthChange>k__BackingField: -1
   <IsAllHealthAffected>k__BackingField: 1
   <FillMaxMotorcycleCondition>k__BackingField: 0
-  <MotorcycleConditionChange>k__BackingField: 0
-  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <MotorcycleConditionChange>k__BackingField: -1
+  <IsAllMotorcycleConditionAffected>k__BackingField: 1
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0
   <IsAllFuelAffected>k__BackingField: 0

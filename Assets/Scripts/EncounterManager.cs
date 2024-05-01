@@ -117,6 +117,8 @@ public class EncounterManager : MonoBehaviour
 
     private void UpdateStats()
     {
+        // TODO: add text of what has been gained/lost
+
         _groupStats.UpdateMoney(_currentEncounter.MoneyChange);
         _groupStats.UpdateAmmo(_currentEncounter.AmmoChange);
         _groupStats.UpdateMedicine(_currentEncounter.MedicineChange);

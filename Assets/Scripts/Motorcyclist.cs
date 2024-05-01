@@ -84,7 +84,8 @@ public class Motorcyclist : MonoBehaviour
     void Update()
     {
         // TODO check if dead (fuel/health/motorcycle condition runs out)
-        
+        if (_isDead) return;
+
         if (_travelManager.IsInTown() || _travelManager.IsInEncounter())
         {
             _fuelTimer = 0;
@@ -109,6 +110,7 @@ public class Motorcyclist : MonoBehaviour
         else
         {
             _healthSlider.SetCurrentValue(_currentHealth);
+            CheckIfDead(_HEALTH);
         }
     }
 
@@ -140,6 +142,7 @@ public class Motorcyclist : MonoBehaviour
         else
         {
             _fuelSlider.SetCurrentValue(_currentFuel);
+            CheckIfDead(_FUEL);
         }
     }
 
@@ -171,6 +174,7 @@ public class Motorcyclist : MonoBehaviour
         else
         {
             _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
+            CheckIfDead(_MOTORCYCLECONDITION);
         }
     }
 
@@ -197,32 +201,38 @@ public class Motorcyclist : MonoBehaviour
         return _motorcyclistName;
     }
 
-    private void CheckIfDead(int type)
+    private bool CheckIfDead(int type)
     {
-        //TODO: if motorcyclist is dead, remove their gameObject from TravelManager,
-        if (_isDead) return;
+        //TODO: if motorcyclist is dead, remove their reference from TravelManager
+
+        if (_isDead) return true;
 
         switch (type)
         {
             case 0:
                 if (_currentHealth <= 0)
                 {
-
+                    Debug.Log(_motorcyclistName + " died");
+                    return true;
                 }
                 break;
             case 1:
                 if (_currentFuel <= 0)
                 {
-
+                    Debug.Log(_motorcyclistName + " is out of fuel and has to be left behind.");
+                    return true;
                 }
                 break;
             case 2:
                 if (_currentMotorcycleCondition <= 0)
                 {
-
+                    Debug.Log(_motorcyclistName + "'s motorcycle is beyond repair, and they must be left behind.");
+                    return true;
                 }
                 break;
         }
+
+        return false;
     }
 
     public void SetParentsOfSliders(Transform healthParent, Transform fuelParent, Transform motorcycleParent)

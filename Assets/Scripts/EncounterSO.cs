@@ -19,25 +19,25 @@ public class EncounterSO : ScriptableObject
 
     //TODO add ongoing effects
     [field: SerializeField]
+    public bool IsAllHealthAffected { get; private set; }
+    [field: SerializeField]
     public bool FillMaxHealth { get; private set; }
     [field: SerializeField]
     public int HealthChange { get; private set; }
-    [field: SerializeField]
-    public bool IsAllHealthAffected { get; private set; }
 
+    [field: SerializeField]
+    public bool IsAllMotorcycleConditionAffected { get; private set; }
     [field: SerializeField]
     public bool FillMaxMotorcycleCondition { get; private set; }
     [field: SerializeField]
     public int MotorcycleConditionChange { get; private set; }
-    [field: SerializeField]
-    public bool IsAllMotorcycleConditionAffected { get; private set; }
 
+    [field: SerializeField]
+    public bool IsAllFuelAffected { get; private set; }
     [field: SerializeField]
     public bool FillMaxFuel { get; private set; }
     [field: SerializeField]
     public int FuelChange { get; private set; }
-    [field: SerializeField]
-    public bool IsAllFuelAffected { get; private set; }
 
     [field: SerializeField]
     public int MoneyChange { get; private set; }

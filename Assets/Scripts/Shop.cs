@@ -50,6 +50,8 @@ public class Shop : MonoBehaviour
             _fuelCostText.text = "$" + _currentTown.FuelCost + " for " + _currentTown.FuelAmount + " Fuel";
             _motorcycleCostText.text = "$" + _currentTown.RepairCost + " for " + _currentTown.RepairAmount + " Repair";
         }
+
+        // TODO if in final town, health and fuel options are disabled
     }
 
     public void SetMotorcyclist(Motorcyclist motorcyclist)

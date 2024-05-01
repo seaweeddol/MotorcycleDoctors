@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18145be393de772499f28ab13b37cfa6, type: 3}
+  m_Name: Town 5 - Dome City
+  m_EditorClassIdentifier: 
+  <IsFinalTown>k__BackingField: 1
+  <TownName>k__BackingField: Dome City
+  <TownDescription>k__BackingField: Built in the ruins of the former Tacoma Dome,
+    this compact but easily defended town has become a safe haven and necessary stop
+    for those travelling to new US capital, The Republic of Seattle.
+  <MoneyOnArrival>k__BackingField: 0
+  <isFirstShop>k__BackingField: 0
+  <MedicineCost>k__BackingField: 0
+  <MedicineAmount>k__BackingField: 0
+  <AmmoCost>k__BackingField: 0
+  <AmmoAmount>k__BackingField: 0
+  <HealthCost>k__BackingField: 0
+  <HealthAmount>k__BackingField: 0
+  <FuelCost>k__BackingField: 0
+  <FuelAmount>k__BackingField: 0
+  <RepairCost>k__BackingField: 10
+  <RepairAmount>k__BackingField: 1

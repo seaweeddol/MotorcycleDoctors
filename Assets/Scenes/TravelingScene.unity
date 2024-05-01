@@ -16622,7 +16622,7 @@ PrefabInstance:
       objectReference: {fileID: 1751122409}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.data[0]
@@ -16636,6 +16636,14 @@ PrefabInstance:
       propertyPath: _towns.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 6592603fc4ed2cf48921e0a7e65e13a3, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: de0c38358616d8649967fecefaf5a168, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: _towns.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: a1459ebc05db8934f869ee60d5282b1b, type: 2}
     - target: {fileID: 7837919733615975487, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -40,18 +40,21 @@ public class GroupStats : MonoBehaviour
 
     public void UpdateMoney(int amount)
     {
+        // TODO: check if there is enough medicine to subtract
         _money += amount;
         _moneyText.text = "$" + _money;
     }
 
     public void UpdateAmmo(int amount)
     {
+        // TODO: check if there is enough ammo to subtract
         _ammo += amount;
         _ammoText.text = _ammo.ToString();
     }
 
     public void UpdateMedicine(int amount)
     {
+        // TODO: check if there is enough medicine to subtract
         _medicine += amount;
         _medicineText.text = _medicine.ToString();
     }
