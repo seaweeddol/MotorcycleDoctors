@@ -39,6 +39,8 @@ public class Town : MonoBehaviour
         _welcomeGO.SetActive(true);
         _welcomeText.text = "Welcome to " + _currentTown.TownName;
         _townDescription.text = _currentTown.TownDescription;
+
+        _townName.text = _currentTown.TownName + " Shop";
     }
 
     void Update()
@@ -65,15 +67,19 @@ public class Town : MonoBehaviour
             motorcyclistShop.GetComponent<Shop>().SetMotorcyclist(motorcyclist);
         }
     }
-
     public void LeaveTown()
     {
-        _travelManager.SetInTown(false);
         foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
         {
             motorcyclist.ResetSliderParents();
         }
+
+        for (int i = 0; i < _motorcyclistShopParent.transform.childCount; i++)
+        {
+            Destroy(_motorcyclistShopParent.transform.GetChild(0).gameObject);
+        }
+
+        _travelManager.SetInTown(false);
         SceneManager.LoadScene(0);
     }
-
 }

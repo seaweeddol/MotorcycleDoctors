@@ -31,6 +31,9 @@ public class Shop : MonoBehaviour
     {
         _groupStats = FindObjectOfType<GroupStats>();
         _currentTown = FindObjectOfType<Town>()._currentTown;
+        _healthCostText.text = "$" + _currentTown.HealthCost + " for " + _currentTown.HealthAmount + " Health";
+        _fuelCostText.text = "$" + _currentTown.FuelCost + " for " + _currentTown.FuelAmount + " Fuel";
+        _motorcycleCostText.text = "$" + _currentTown.RepairCost + " for " + _currentTown.RepairAmount + " Repair";
     }
 
     public void SetMotorcyclist(Motorcyclist motorcyclist)
