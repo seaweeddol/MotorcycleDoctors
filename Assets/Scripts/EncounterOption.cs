@@ -8,7 +8,6 @@ public class EncounterOption : MonoBehaviour
 
     public void SelectOption()
     {
-        Debug.Log("option: " + _encounter.EncounterText);
         FindObjectOfType<EncounterManager>().EnableEncounter(_encounter);
     }
 

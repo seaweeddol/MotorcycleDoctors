@@ -83,6 +83,8 @@ public class Motorcyclist : MonoBehaviour
 
     void Update()
     {
+        // TODO check if dead (fuel/health/motorcycle condition runs out)
+        
         if (_travelManager.IsInTown() || _travelManager.IsInEncounter())
         {
             _fuelTimer = 0;

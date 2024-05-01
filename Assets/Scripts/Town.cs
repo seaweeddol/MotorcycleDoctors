@@ -40,7 +40,6 @@ public class Town : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("entered town");
         _travelManager = FindObjectOfType<TravelManager>();
         _encounterManager = FindObjectOfType<EncounterManager>();
         _groupStats = FindObjectOfType<GroupStats>();
@@ -72,16 +71,13 @@ public class Town : MonoBehaviour
     void SetupShop()
     {
         // TODO: need to hide traveling UI while in shop
-        // TODO: need to show money while in shop
 
         if (_currentTown.isFirstShop)
         {
-            // set up first shop
             _firstShopGO.SetActive(true);
         }
         else
         {
-            Debug.Log("setting up motorcyclist shops");
             _motorcyclistShopParent.SetActive(true);
             foreach (Motorcyclist motorcyclist in _encounterManager._motorcyclists)
             {

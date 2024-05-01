@@ -6,6 +6,9 @@ using UnityEngine.UI;
 [CreateAssetMenu(menuName = "Encounter", fileName = "New Encounter")]
 public class EncounterSO : ScriptableObject
 {
+
+    // TODO add way to insert specific name within Encounter Text
+
     [field: SerializeField]
     public string EncounterText { get; private set; }
 

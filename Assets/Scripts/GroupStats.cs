@@ -36,6 +36,8 @@ public class GroupStats : MonoBehaviour
         _medicineText.text = _medicine.ToString();
     }
 
+    // TODO add ability to use medicine
+
     public void UpdateMoney(int amount)
     {
         _money += amount;
