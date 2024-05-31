@@ -102,16 +102,9 @@ public class Motorcyclist : MonoBehaviour
 
     public void UpdateHealth(int amount)
     {
-        _currentHealth += amount;
-        if (_currentHealth > _maxHealth)
-        {
-            MaxOutHealth();
-        }
-        else
-        {
-            _healthSlider.SetCurrentValue(_currentHealth);
-            CheckIfDead(_HEALTH);
-        }
+        _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _maxHealth);
+        _healthSlider.SetCurrentValue(_currentHealth);
+        CheckIfDead(_HEALTH);
     }
 
     public void MaxOutHealth()
@@ -134,16 +127,9 @@ public class Motorcyclist : MonoBehaviour
 
     public void UpdateFuel(int amount)
     {
-        _currentFuel += amount;
-        if (_currentFuel > _maxFuel)
-        {
-            MaxOutFuel();
-        }
-        else
-        {
-            _fuelSlider.SetCurrentValue(_currentFuel);
-            CheckIfDead(_FUEL);
-        }
+        _currentFuel = Mathf.Clamp(_currentFuel + amount, 0, _maxFuel);
+        _fuelSlider.SetCurrentValue(_currentFuel);
+        CheckIfDead(_FUEL);
     }
 
     public void MaxOutFuel()
@@ -166,16 +152,9 @@ public class Motorcyclist : MonoBehaviour
 
     public void UpdateMotorcycleCondition(int amount)
     {
-        _currentMotorcycleCondition += amount;
-        if (_currentMotorcycleCondition > _maxMotorcycleCondition)
-        {
-            MaxOutMotorcycleCondition();
-        }
-        else
-        {
-            _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
-            CheckIfDead(_MOTORCYCLECONDITION);
-        }
+        _currentMotorcycleCondition = Mathf.Clamp(_currentMotorcycleCondition + amount, 0, _maxMotorcycleCondition);
+        _motorcycleConditionSlider.SetCurrentValue(_currentMotorcycleCondition);
+        CheckIfDead(_MOTORCYCLECONDITION);
     }
 
     public void MaxOutMotorcycleCondition()
@@ -229,7 +208,7 @@ public class Motorcyclist : MonoBehaviour
                 if (_currentMotorcycleCondition <= 0)
                 {
                     _travelManager.EnableDeathEncounter(_MOTORCYCLECONDITION, this);
-                        // TODO: split remaining fuel between other motorcyclists
+                    // TODO: split remaining fuel between other motorcyclists
                     Debug.Log(_motorcyclistName + "'s motorcycle is beyond repair, and they must be left behind.");
                     return true;
                 }

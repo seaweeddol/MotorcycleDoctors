@@ -119,6 +119,12 @@ public class EncounterManager : MonoBehaviour
             _motorcyclists.Remove(motorcyclist);
             Debug.Log(_motorcyclists.Count);
             motorcyclist.DestroyMotorcyclist();
+
+            if (_motorcyclists.Count == 0)
+            {
+                // all motorcyclists died
+                // TODO: display game over/failed screen
+            }
         }
         else
         {
