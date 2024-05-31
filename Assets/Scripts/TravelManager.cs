@@ -22,6 +22,13 @@ public class TravelManager : MonoBehaviour
     [SerializeField]
     private List<TownSO> _towns;
 
+    [SerializeField]
+    private EncounterSO healthDeathEncounter;
+    [SerializeField]
+    private EncounterSO fuelDeathEncounter;
+    [SerializeField]
+    private EncounterSO motorcycleDeathEncounter;
+
     private float _timer = 0f;
     private int _encounterCounter = 0;
     private bool _isInTown;
@@ -43,7 +50,8 @@ public class TravelManager : MonoBehaviour
 
     void Update()
     {
-        if (_isFirstTown) {
+        if (_isFirstTown)
+        {
             _isFirstTown = false;
             SceneManager.LoadScene(1);
         }
@@ -67,6 +75,22 @@ public class TravelManager : MonoBehaviour
             _timer = 0f;
             _encounterCounter = 0;
             SceneManager.LoadScene(1);
+        }
+    }
+
+    public void EnableDeathEncounter(int encounterIndex, Motorcyclist motorcyclist)
+    {
+        switch (encounterIndex)
+        {
+            case 0:
+                _encounterManager.EnableEncounter(healthDeathEncounter, motorcyclist);
+                break;
+            case 1:
+                _encounterManager.EnableEncounter(fuelDeathEncounter, motorcyclist);
+                break;
+            case 2:
+                _encounterManager.EnableEncounter(motorcycleDeathEncounter, motorcyclist);
+                break;
         }
     }
 

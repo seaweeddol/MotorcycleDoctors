@@ -17,6 +17,9 @@ public class EncounterSO : ScriptableObject
     [field: SerializeField]
     public List<EncounterOptionSO> EncounterOptions { get; private set; } = null;
 
+    [field: SerializeField]
+    public bool IsDeathEvent { get; private set; }
+
     //TODO add ongoing effects
     [field: SerializeField]
     public bool IsAllHealthAffected { get; private set; }
@@ -45,6 +48,12 @@ public class EncounterSO : ScriptableObject
     public int AmmoChange { get; private set; }
     [field: SerializeField]
     public int MedicineChange { get; private set; }
+
+    private string MotorcyclistName;
+
+    public void SetMotorcyclist(string motorcyclistName){
+        MotorcyclistName = motorcyclistName;
+    }
 
     // TODO: add way to affect money/ammo/medicine by percentage
     // TODO: add way to determine outcome of encounter based on current stats

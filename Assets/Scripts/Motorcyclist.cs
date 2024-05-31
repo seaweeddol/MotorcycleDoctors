@@ -212,6 +212,7 @@ public class Motorcyclist : MonoBehaviour
             case 0:
                 if (_currentHealth <= 0)
                 {
+                    _travelManager.EnableDeathEncounter(_HEALTH, this);
                     Debug.Log(_motorcyclistName + " died");
                     return true;
                 }
@@ -219,6 +220,7 @@ public class Motorcyclist : MonoBehaviour
             case 1:
                 if (_currentFuel <= 0)
                 {
+                    _travelManager.EnableDeathEncounter(_FUEL, this);
                     Debug.Log(_motorcyclistName + " is out of fuel and has to be left behind.");
                     return true;
                 }
@@ -226,6 +228,8 @@ public class Motorcyclist : MonoBehaviour
             case 2:
                 if (_currentMotorcycleCondition <= 0)
                 {
+                    _travelManager.EnableDeathEncounter(_MOTORCYCLECONDITION, this);
+                        // TODO: split remaining fuel between other motorcyclists
                     Debug.Log(_motorcyclistName + "'s motorcycle is beyond repair, and they must be left behind.");
                     return true;
                 }
@@ -250,5 +254,12 @@ public class Motorcyclist : MonoBehaviour
         _healthSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
         _fuelSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
         _motorcycleSliderGO.transform.SetParent(_motorcycleStatsParent.transform);
+    }
+
+    public void DestroyMotorcyclist()
+    {
+        Destroy(_motorcycleStatsParent);
+        //TODO: get reference to motorcyclist image and destroy
+        Destroy(gameObject);
     }
 }

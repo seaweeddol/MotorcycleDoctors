@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,7 +81,7 @@ public class EncounterManager : MonoBehaviour
     /*
         encounter: Provide if EnableEncounter() is accessed due to option selection.
     */
-    public void EnableEncounter(EncounterSO encounter = null)
+    public void EnableEncounter(EncounterSO encounter = null, Motorcyclist motorcyclist = null)
     {
         if (encounter != null)
         {
@@ -112,8 +113,20 @@ public class EncounterManager : MonoBehaviour
             _continuePrompt.SetActive(true);
         }
 
-        UpdateStats();
+        if (motorcyclist != null)
+        {
+            // motorcyclist has died
+            _motorcyclists.Remove(motorcyclist);
+            Debug.Log(_motorcyclists.Count);
+            motorcyclist.DestroyMotorcyclist();
+        }
+        else
+        {
+            UpdateStats();
+        }
     }
+
+    // TODO add death encounter
 
     private void UpdateStats()
     {
@@ -187,7 +200,6 @@ public class EncounterManager : MonoBehaviour
             int randomIndex = Random.Range(0, _motorcyclists.Count);
             _motorcyclists[randomIndex].UpdateMotorcycleCondition(_currentEncounter.MotorcycleConditionChange);
         }
-
     }
 
     private void DisableEncounter()
