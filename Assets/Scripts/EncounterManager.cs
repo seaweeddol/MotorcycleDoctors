@@ -32,7 +32,6 @@ public class EncounterManager : MonoBehaviour
     public List<Motorcyclist> _motorcyclists { get; private set; }
 
     private EncounterSO _currentEncounter;
-    private bool _isEncounterActive;
 
     void Awake()
     {

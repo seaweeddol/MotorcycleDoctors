@@ -49,10 +49,10 @@ public class EncounterSO : ScriptableObject
     [field: SerializeField]
     public int MedicineChange { get; private set; }
 
-    private string MotorcyclistName;
+    private string _motorcyclistName;
 
     public void SetMotorcyclist(string motorcyclistName){
-        MotorcyclistName = motorcyclistName;
+        _motorcyclistName = motorcyclistName;
     }
 
     // TODO: add way to affect money/ammo/medicine by percentage

@@ -23,11 +23,11 @@ public class TravelManager : MonoBehaviour
     private List<TownSO> _towns;
 
     [SerializeField]
-    private EncounterSO healthDeathEncounter;
+    private EncounterSO _healthDeathEncounter;
     [SerializeField]
-    private EncounterSO fuelDeathEncounter;
+    private EncounterSO _fuelDeathEncounter;
     [SerializeField]
-    private EncounterSO motorcycleDeathEncounter;
+    private EncounterSO _motorcycleDeathEncounter;
 
     private float _timer = 0f;
     private int _encounterCounter = 0;
@@ -83,13 +83,13 @@ public class TravelManager : MonoBehaviour
         switch (encounterIndex)
         {
             case 0:
-                _encounterManager.EnableEncounter(healthDeathEncounter, motorcyclist);
+                _encounterManager.EnableEncounter(_healthDeathEncounter, motorcyclist);
                 break;
             case 1:
-                _encounterManager.EnableEncounter(fuelDeathEncounter, motorcyclist);
+                _encounterManager.EnableEncounter(_fuelDeathEncounter, motorcyclist);
                 break;
             case 2:
-                _encounterManager.EnableEncounter(motorcycleDeathEncounter, motorcyclist);
+                _encounterManager.EnableEncounter(_motorcycleDeathEncounter, motorcyclist);
                 break;
         }
     }
