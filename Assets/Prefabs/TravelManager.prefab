@@ -16011,6 +16011,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _motorcyclistName
+      value: Larry
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: _motorcyclistImage
       value: 
       objectReference: {fileID: 1522716441862099773}
@@ -16203,6 +16207,10 @@ PrefabInstance:
     - target: {fileID: 3033129526340896170, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _motorcyclistName
+      value: Barry
       objectReference: {fileID: 0}
     - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: _motorcyclistImage

@@ -157,11 +157,14 @@ public class EncounterManager : MonoBehaviour
         }
         else
         {
-            string str = _currentEncounter.EncounterText;
-            str = str.Replace("{name}", "Lisa");
-            _encounterText.text = str;
             int randomIndex = Random.Range(0, _motorcyclists.Count);
-            _motorcyclists[randomIndex].UpdateHealth(_currentEncounter.HealthChange);
+            Motorcyclist randomMotorcyclist = _motorcyclists[randomIndex];
+
+            string encounterText = _currentEncounter.EncounterText;
+            encounterText = encounterText.Replace("{name}", randomMotorcyclist.GetName());
+            _encounterText.text = encounterText;
+
+            randomMotorcyclist.UpdateHealth(_currentEncounter.HealthChange);
         }
 
         // fuel
