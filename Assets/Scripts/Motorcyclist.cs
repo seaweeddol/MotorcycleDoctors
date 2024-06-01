@@ -238,6 +238,7 @@ public class Motorcyclist : MonoBehaviour
 
     public void DestroyMotorcyclist()
     {
+        // TODO: center motorcyclists
         Destroy(_motorcyclistImage);
         Destroy(_motorcycleStatsParent);
         Destroy(gameObject);

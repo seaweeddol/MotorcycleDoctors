@@ -15,18 +15,19 @@ MonoBehaviour:
   <IsFinalEncounter>k__BackingField: 0
   <EncounterText>k__BackingField: "You decide the risk is worth it and grab the Medicine.
     Just as you do, a group of Dentists ambush you and shoot at you twice. One shot
-    hits one of you in the arm, and the other hits one of the Motorcycles. However,
-    you\u2019re able to get away with the Medicine."
+    hits {name} in the arm, and the other hits {name}'s Motorcycle. However, you\u2019re
+    able to get away with the Medicine."
   <EncounterOptions>k__BackingField: []
+  <IsDeathEvent>k__BackingField: 0
+  <IsAllHealthAffected>k__BackingField: 0
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: -1
-  <IsAllHealthAffected>k__BackingField: 0
+  <IsAllMotorcycleConditionAffected>k__BackingField: 0
   <FillMaxMotorcycleCondition>k__BackingField: 0
   <MotorcycleConditionChange>k__BackingField: -1
-  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <IsAllFuelAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0
-  <IsAllFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
   <MedicineChange>k__BackingField: 1

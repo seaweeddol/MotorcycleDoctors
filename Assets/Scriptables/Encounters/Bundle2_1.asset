@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
   m_Name: Bundle2_1
   m_EditorClassIdentifier: 
-  <EncounterText>k__BackingField: "You\u2019re not gonna believe this, but one of
-    you has dysentery. They now lose additional health after each day of travel.
+  <IsFinalEncounter>k__BackingField: 0
+  <EncounterText>k__BackingField: "You\u2019re not gonna believe this, but {name}
+    has dysentery. {name} now loses 1 additional health after each day of travel.
     Ain\u2019t that just the way."
   <EncounterOptions>k__BackingField: []
+  <IsDeathEvent>k__BackingField: 0
+  <IsAllHealthAffected>k__BackingField: 0
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: 0
-  <IsAllHealthAffected>k__BackingField: 0
+  <IsAllMotorcycleConditionAffected>k__BackingField: 0
   <FillMaxMotorcycleCondition>k__BackingField: 0
   <MotorcycleConditionChange>k__BackingField: 0
-  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <IsAllFuelAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0
-  <IsAllFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
   <MedicineChange>k__BackingField: 0

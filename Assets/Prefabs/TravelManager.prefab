@@ -34,9 +34,7 @@ RectTransform:
   m_Children:
   - {fileID: 5094822266794760345}
   - {fileID: 4936182599527401178}
-  - {fileID: 2347159354010439295}
-  - {fileID: 4258082520724484576}
-  - {fileID: 6158076306898846074}
+  - {fileID: 6280316200010025470}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5031,7 +5029,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6430160838032518929}
-  m_Father: {fileID: 4042071590365676499}
+  m_Father: {fileID: 6280316200010025470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1376883114946878720
 SpriteRenderer:
@@ -5181,6 +5179,44 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1591715197955951091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6280316200010025470}
+  m_Layer: 5
+  m_Name: Motorcyclist Sprites
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6280316200010025470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591715197955951091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2347159354010439295}
+  - {fileID: 4258082520724484576}
+  - {fileID: 6158076306898846074}
+  m_Father: {fileID: 4042071590365676499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2972319830918479088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5213,7 +5249,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2349102302127440848}
-  m_Father: {fileID: 4042071590365676499}
+  m_Father: {fileID: 6280316200010025470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7202667587668901296
 SpriteRenderer:
@@ -10640,7 +10676,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 55914595197824343}
-  m_Father: {fileID: 4042071590365676499}
+  m_Father: {fileID: 6280316200010025470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &791391218723558073
 SpriteRenderer:

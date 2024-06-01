@@ -121,6 +121,7 @@ public class EncounterManager : MonoBehaviour
 
             if (_motorcyclists.Count == 0)
             {
+                Debug.Log("game over");
                 // all motorcyclists died
                 // TODO: display game over/failed screen
             }
@@ -130,8 +131,6 @@ public class EncounterManager : MonoBehaviour
             UpdateStats();
         }
     }
-
-    // TODO add death encounter
 
     private void UpdateStats()
     {
@@ -158,6 +157,9 @@ public class EncounterManager : MonoBehaviour
         }
         else
         {
+            string str = _currentEncounter.EncounterText;
+            str = str.Replace("{name}", "Lisa");
+            _encounterText.text = str;
             int randomIndex = Random.Range(0, _motorcyclists.Count);
             _motorcyclists[randomIndex].UpdateHealth(_currentEncounter.HealthChange);
         }

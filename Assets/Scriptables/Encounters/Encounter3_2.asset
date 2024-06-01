@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991a2025bb8c01b46965b953bdef733d, type: 3}
   m_Name: Encounter3_2
   m_EditorClassIdentifier: 
-  <EncounterText>k__BackingField: One of your gang hits an oil slick and eats pavement.
-    They lose one health, and sort of forget what forceps do for a few minutes.
+  <IsFinalEncounter>k__BackingField: 0
+  <EncounterText>k__BackingField: '{name} hits an oil slick and eats pavement. They
+    lose one health, and sort of forget what forceps do for a few minutes.'
   <EncounterOptions>k__BackingField: []
+  <IsDeathEvent>k__BackingField: 0
+  <IsAllHealthAffected>k__BackingField: 0
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: -1
-  <IsAllHealthAffected>k__BackingField: 0
+  <IsAllMotorcycleConditionAffected>k__BackingField: 0
   <FillMaxMotorcycleCondition>k__BackingField: 0
   <MotorcycleConditionChange>k__BackingField: 0
-  <IsAllMotorcycleConditionAffected>k__BackingField: 0
+  <IsAllFuelAffected>k__BackingField: 0
   <FillMaxFuel>k__BackingField: 0
   <FuelChange>k__BackingField: 0
-  <IsAllFuelAffected>k__BackingField: 0
   <MoneyChange>k__BackingField: 0
   <AmmoChange>k__BackingField: 0
   <MedicineChange>k__BackingField: 0
