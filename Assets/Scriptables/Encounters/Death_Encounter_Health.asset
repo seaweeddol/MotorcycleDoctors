@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Death_Encounter_Health
   m_EditorClassIdentifier: 
   <IsFinalEncounter>k__BackingField: 0
-  <EncounterText>k__BackingField: 
+  <EncounterText>k__BackingField: Jerry has died.
   <EncounterOptions>k__BackingField: []
+  <IsDeathEvent>k__BackingField: 1
   <IsAllHealthAffected>k__BackingField: 0
   <FillMaxHealth>k__BackingField: 0
   <HealthChange>k__BackingField: 0

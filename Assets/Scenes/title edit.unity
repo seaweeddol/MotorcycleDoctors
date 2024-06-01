@@ -269,13 +269,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266785903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 1.64, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -958.9258, y: -536.84674, z: 0}
+  m_LocalScale: {x: 2.7781348, y: 2.7781348, z: 2.7781348}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 499145768}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1427101925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &266785906
 Animator:
@@ -10190,6 +10190,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _maxFuel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _motorcyclistImage
+      value: 
+      objectReference: {fileID: 1323202037}
     - target: {fileID: 7349812038700900138, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10329,13 +10341,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056459876}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.21, y: -1.04, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -950.3506, y: -541.81036, z: 0}
+  m_LocalScale: {x: 2.7781348, y: 2.7781348, z: 2.7781348}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1349782855}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1427101925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1056459879
 Animator:
@@ -10498,6 +10510,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _motorcyclistImage
+      value: 
+      objectReference: {fileID: 266785903}
     - target: {fileID: 7349812038700900138, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10637,13 +10653,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323202037}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.69, y: -0.68, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -966.8342, y: -541.1436, z: 0}
+  m_LocalScale: {x: 2.7781348, y: 2.7781348, z: 2.7781348}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 588029159}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1427101925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1323202040
 Animator:
@@ -15496,6 +15512,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!224 &1427101925 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4042071590365676499, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+  m_PrefabInstance: {fileID: 5278782182701943585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1479630376
 GameObject:
   m_ObjectHideFlags: 0
@@ -15574,8 +15595,8 @@ Transform:
   m_GameObject: {fileID: 1479630376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0303, y: -0.594, z: 0}
-  m_LocalScale: {x: 37.13296, y: 11.016225, z: 1}
+  m_LocalPosition: {x: -0.0348, y: -0.594, z: 0}
+  m_LocalScale: {x: 37.404034, y: 11.016225, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -15731,6 +15752,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6226879774298228169, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
+      propertyPath: _motorcyclistImage
+      value: 
+      objectReference: {fileID: 1056459876}
     - target: {fileID: 7349812038700900138, guid: 53f57d59952fcd747a26a6a39d4e7f41, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15899,6 +15924,10 @@ PrefabInstance:
       propertyPath: <_motorcyclists>k__BackingField.Array.data[3]
       value: 
       objectReference: {fileID: 787254262}
+    - target: {fileID: 6086190142636900144, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.59558105
+      objectReference: {fileID: 0}
     - target: {fileID: 7012717765076289811, guid: a5933b5bbebba354eb81dd1596d44166, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16625,6 +16654,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: fuelDeathEncounter
+      value: 
+      objectReference: {fileID: 11400000, guid: 45dc3b63887f0474d994449392235abd, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: _towns.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: b4931bdc77e0d3c45baecd3431740aa1, type: 2}
@@ -16644,6 +16677,14 @@ PrefabInstance:
       propertyPath: _towns.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: a1459ebc05db8934f869ee60d5282b1b, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: healthDeathEncounter
+      value: 
+      objectReference: {fileID: 11400000, guid: 45dc3b63887f0474d994449392235abd, type: 2}
+    - target: {fileID: 7774709194511499380, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      propertyPath: motorcycleDeathEncounter
+      value: 
+      objectReference: {fileID: 11400000, guid: 45dc3b63887f0474d994449392235abd, type: 2}
     - target: {fileID: 7837919733615975487, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -16774,6 +16815,15 @@ PrefabInstance:
     - {fileID: 7108131485871439186, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
     - {fileID: 2137589775176223800, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4042071590365676499, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1323202039}
+    - targetCorrespondingSourceObject: {fileID: 4042071590365676499, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1056459878}
+    - targetCorrespondingSourceObject: {fileID: 4042071590365676499, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 266785905}
     - targetCorrespondingSourceObject: {fileID: 5094822266794760345, guid: 0aaf23b2f39a1ca45817f69e0049a358, type: 3}
       insertIndex: -1
       addedObject: {fileID: 787254261}
@@ -16800,9 +16850,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1323202039}
-  - {fileID: 1056459878}
-  - {fileID: 266785905}
   - {fileID: 1479630378}
   - {fileID: 5278782182701943585}
   - {fileID: 207482952}

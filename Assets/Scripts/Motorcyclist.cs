@@ -8,6 +8,9 @@ using UnityEngine.UIElements;
 public class Motorcyclist : MonoBehaviour
 {
     [SerializeField]
+    private GameObject _motorcyclistImage;
+
+    [SerializeField]
     private string _motorcyclistName = "Jerry";
 
     [SerializeField]
@@ -182,8 +185,6 @@ public class Motorcyclist : MonoBehaviour
 
     private bool CheckIfDead(int type)
     {
-        //TODO: if motorcyclist is dead, remove their reference from TravelManager
-
         if (_isDead) return true;
 
         switch (type)
@@ -237,8 +238,8 @@ public class Motorcyclist : MonoBehaviour
 
     public void DestroyMotorcyclist()
     {
+        Destroy(_motorcyclistImage);
         Destroy(_motorcycleStatsParent);
-        //TODO: get reference to motorcyclist image and destroy
         Destroy(gameObject);
     }
 }
