@@ -115,6 +115,8 @@ public class EncounterManager : MonoBehaviour
         if (motorcyclist != null)
         {
             // motorcyclist has died
+            ReplacePlaceholder("{name}", motorcyclist.GetName());
+
             _motorcyclists.Remove(motorcyclist);
             Debug.Log(_motorcyclists.Count);
             motorcyclist.DestroyMotorcyclist();
@@ -160,9 +162,7 @@ public class EncounterManager : MonoBehaviour
             int randomIndex = Random.Range(0, _motorcyclists.Count);
             Motorcyclist randomMotorcyclist = _motorcyclists[randomIndex];
 
-            string encounterText = _currentEncounter.EncounterText;
-            encounterText = encounterText.Replace("{name}", randomMotorcyclist.GetName());
-            _encounterText.text = encounterText;
+            ReplacePlaceholder("{name}", randomMotorcyclist.GetName());
 
             randomMotorcyclist.UpdateHealth(_currentEncounter.HealthChange);
         }
@@ -222,6 +222,13 @@ public class EncounterManager : MonoBehaviour
         _encounterParent.SetActive(false);
         _optionParent.SetActive(false);
         _continuePrompt.SetActive(false);
+    }
+
+    private void ReplacePlaceholder(string placeholderStr, string replacementStr)
+    {
+        string encounterText = _currentEncounter.EncounterText;
+        encounterText = encounterText.Replace(placeholderStr, replacementStr);
+        _encounterText.text = encounterText;
     }
 
     public bool CheckIfActive()

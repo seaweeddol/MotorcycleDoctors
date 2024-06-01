@@ -200,6 +200,7 @@ public class Motorcyclist : MonoBehaviour
             case 1:
                 if (_currentFuel <= 0)
                 {
+                    // TODO: create encounter SOs for fuel and motorcycle condition death encounters
                     _travelManager.EnableDeathEncounter(_FUEL, this);
                     Debug.Log(_motorcyclistName + " is out of fuel and has to be left behind.");
                     return true;
